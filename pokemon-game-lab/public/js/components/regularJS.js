@@ -80,8 +80,9 @@ while (i < pokemonsEl.length) {
           });
           player2img[0].src = gameState.currentRivalPokemon[0].img;
 
+          //  Current User and CPU Pokemon Initial Health
           gameState.currentPokemon[0].health = calculateInitialHealth(gameState.currentPokemon);
-
+          gameState.currentRivalPokemon[0].health = calculateInitialHealth(gameState.currentRivalPokemon);
           console.log(gameState);
           //  User Choose Attack
 
@@ -131,14 +132,24 @@ var cpuAttack = function cpuAttack() {
 };
 
 var calculateInitialHealth = function calculateInitialHealth(user) {
-
      return 0.20 * Math.sqrt(user[0].level) * user[0].defense * user[0].hp;
 };
 
+var attackMove = function attackMove(attack, level, stack, critical, enemy) {
+     console.log('enemy.health before: ' + enemy.health);
+     var attackAmount = attack * level * (stack + critical) / 3;
+     enemy.health - attackAmount;
+
+     console.log('enemy.health after: ' + attackAmount);
+};
+
 var play = function play(userAttack, cpuAttack) {
+     var currentPokemon = gameState.currentPokemon[0];
+     var currentRivalPokemon = gameState.currentPokemon[0];
      switch (userAttack) {
           case 'rock':
                if (cpuAttack == 'paper') {
+                    attackMove(currentPokemon.attack, currentPokemon.level, .8, .5, currentRivalPokemon);
                     console.log('paper killed rock');
                }
                if (cpuAttack == 'scissors') {
