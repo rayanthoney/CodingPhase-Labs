@@ -69,17 +69,20 @@ while (i < pokemonsEl.length) {
           battleScreenEl.classList.toggle('active');
 
           //  Select Data From Current User Pokemon
-          var currentPokemon = pokemonDB.filter(function (pokemon) {
+          gameState.currentPokemon = pokemonDB.filter(function (pokemon) {
                return pokemon.name == gameState.userPokemon;
           });
-          player1img[0].src = currentPokemon[0].img;
+          player1img[0].src = gameState.currentPokemon[0].img;
 
           //  Select Data From Current CPU Pokemon   
-          var currentRivalPokemon = pokemonDB.filter(function (pokemon) {
+          gameState.currentRivalPokemon = pokemonDB.filter(function (pokemon) {
                return pokemon.name == gameState.rivalPokemon;
           });
-          player2img[0].src = currentRivalPokemon[0].img;
+          player2img[0].src = gameState.currentRivalPokemon[0].img;
 
+          gameState.currentPokemon[0].health = calculateInitialHealth(gameState.currentPokemon);
+
+          console.log(gameState);
           //  User Choose Attack
 
 
@@ -127,6 +130,11 @@ var cpuAttack = function cpuAttack() {
      return attacks[randomNumber(0, 3)];
 };
 
+var calculateInitialHealth = function calculateInitialHealth(user) {
+
+     return 0.20 * Math.sqrt(user[0].level) * user[0].defense * user[0].hp;
+};
+
 var play = function play(userAttack, cpuAttack) {
      switch (userAttack) {
           case 'rock':
@@ -139,14 +147,13 @@ var play = function play(userAttack, cpuAttack) {
                if (cpuAttack == 'rock') {
                     console.log('its a draw');
                }
+               console.log(userAttack);
                break;
           case 'paper':
                console.log(userAttack);
-
                break;
-          case 'scissor':
+          case 'scissors':
                console.log(userAttack);
-
                break;
      }
 };
