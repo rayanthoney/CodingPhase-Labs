@@ -136,35 +136,84 @@ var calculateInitialHealth = function calculateInitialHealth(user) {
 };
 
 var attackMove = function attackMove(attack, level, stack, critical, enemy) {
-     console.log('enemy.health before: ' + enemy.health);
+     console.log(enemy.name + ' before: ' + enemy.health);
      var attackAmount = attack * level * (stack + critical);
      enemy.health = enemy.health - attackAmount;
+     checkWinner(enemy.health);
+     console.log(enemy.name + ' after: ' + enemy.health);
+};
 
-     console.log('enemy.health after: ' + enemy.health);
+var checkWinner = function checkWinner(enemyhealth) {
+     if (enemyhealth <= 0) {
+          console.log('Hey WINNNEEERRR');
+     }
 };
 
 var play = function play(userAttack, cpuAttack) {
      var currentPokemon = gameState.currentPokemon[0];
-     var currentRivalPokemon = gameState.currentPokemon[0];
+     var currentRivalPokemon = gameState.currentRivalPokemon[0];
      switch (userAttack) {
           case 'rock':
                if (cpuAttack == 'paper') {
+                    // User
                     attackMove(currentPokemon.attack, currentPokemon.level, .8, .5, currentRivalPokemon);
-                    console.log('paper killed rock');
+                    // CPU
+                    attackMove(currentRivalPokemon.attack, currentRivalPokemon.level, .8, 2, currentPokemon);
                }
                if (cpuAttack == 'scissors') {
-                    console.log('rock killed paper');
+                    // User
+                    attackMove(currentPokemon.attack, currentPokemon.level, .8, 2, currentRivalPokemon);
+                    // CPU
+                    attackMove(currentRivalPokemon.attack, currentRivalPokemon.level, .8, .5, currentPokemon);
                }
                if (cpuAttack == 'rock') {
-                    console.log('its a draw');
+                    // User
+                    attackMove(currentPokemon.attack, currentPokemon.level, .8, .1, currentRivalPokemon);
+                    // CPU
+                    attackMove(currentRivalPokemon.attack, currentRivalPokemon.level, .8, 1, currentPokemon);
                }
-               console.log(userAttack);
+
                break;
           case 'paper':
-               console.log(userAttack);
+               if (cpuAttack == 'paper') {
+                    // User
+                    attackMove(currentPokemon.attack, currentPokemon.level, .8, 1, currentRivalPokemon);
+                    // CPU
+                    attackMove(currentRivalPokemon.attack, currentRivalPokemon.level, .8, 1, currentPokemon);
+               }
+               if (cpuAttack == 'scissors') {
+                    // User
+                    attackMove(currentPokemon.attack, currentPokemon.level, .8, .5, currentRivalPokemon);
+                    // CPU
+                    attackMove(currentRivalPokemon.attack, currentRivalPokemon.level, .8, 2, currentPokemon);
+               }
+               if (cpuAttack == 'rock') {
+                    // User
+                    attackMove(currentPokemon.attack, currentPokemon.level, .8, 2, currentRivalPokemon);
+                    // CPU
+                    attackMove(currentRivalPokemon.attack, currentRivalPokemon.level, .8, .5, currentPokemon);
+               }
+
                break;
           case 'scissors':
-               console.log(userAttack);
+               if (cpuAttack == 'paper') {
+                    // User
+                    attackMove(currentPokemon.attack, currentPokemon.level, .8, 2, currentRivalPokemon);
+                    // CPU
+                    attackMove(currentRivalPokemon.attack, currentRivalPokemon.level, .8, .5, currentPokemon);
+               }
+               if (cpuAttack == 'scissors') {
+                    // User
+                    attackMove(currentPokemon.attack, currentPokemon.level, .8, 1, currentRivalPokemon);
+                    // CPU
+                    attackMove(currentRivalPokemon.attack, currentRivalPokemon.level, .8, 1, currentPokemon);
+               }
+               if (cpuAttack == 'rock') {
+                    // User
+                    attackMove(currentPokemon.attack, currentPokemon.level, .8, .5, currentRivalPokemon);
+                    // CPU
+                    attackMove(currentRivalPokemon.attack, currentRivalPokemon.level, .8, 2, currentPokemon);
+               }
                break;
      }
 };
