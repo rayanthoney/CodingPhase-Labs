@@ -139,10 +139,10 @@ var calculateInitialHealth = function(user){
 
 var attackMove = function(attack, level, stack, critical, enemy) {
      console.log('enemy.health before: ' + enemy.health)
-     var attackAmount = ((attack * level ) * (stack + critical)) / 3
-     enemy.health - attackAmount
+     var attackAmount = ((attack * level ) * (stack + critical))
+     enemy.health = enemy.health - attackAmount
 
-     console.log('enemy.health after: ' + attackAmount)
+     console.log('enemy.health after: ' + enemy.health)
 }
 
 
