@@ -1,6 +1,8 @@
-//  This is the Database
-
-var pokemonDB = [
+//  State
+var gameState = {
+    userPokemon: '',
+    rivalPokemon: '',
+    pokemonDB: [
   {
     name: 'charmander',
     type: 'fire',
@@ -27,31 +29,25 @@ var pokemonDB = [
     defense: 65,
     level: 1,
     img: 'http://www.smogon.com/dex/media/sprites/xy/squirtle.gif'
-  }
-  
-]
-
-//  State
-var gameState = {
-    userPokemon: '',
-    rivalPokemon: ''
+  },  
+],
+elements: {
+     pokemonsEl: document.querySelector('.select-screen').querySelectorAll('.character'),
+     battleScreenEl: document.getElementById('battle-screen'),
+     attackBtnsEl: document.getElementById('battle-screen').querySelectorAll('.attack')
+     
+     }
 }
 
-console.log(gameState)
-
 //  Elements
-var pokemonsEl = document.querySelector('.select-screen').querySelectorAll('.character')
-console.log(pokemonsEl)
-var battleScreenEl = document.getElementById('battle-screen')
-var attackBtnsEl = document.getElementById('battle-screen').querySelectorAll('.attack')
-console.log(attackBtnsEl)
+console.log(gameState.elements.attackBtnsEl)
 
 
 //  This is the Initial Loop
 var i = 0;
-while (i < pokemonsEl.length) {
+while (i < gameState.elements.pokemonsEl.length) {
 //  This adds function to all the characters on screen select
-    pokemonsEl[i].onclick = function() {
+    gameState.elements.pokemonsEl[i].onclick = function() {
 //  Current Selected Pokemons Name
      var pokemonName = this.dataset.pokemon
 
@@ -65,17 +61,17 @@ while (i < pokemonsEl.length) {
 //  CPU Picks a Pokemon
      cpuPick()
 //  Changes the Select Screen to Battle Screen
-     battleScreenEl.classList.toggle('active')
+     gameState.elements.battleScreenEl.classList.toggle('active')
 
 //  Select Data From Current User Pokemon
-     gameState.currentPokemon = pokemonDB.filter(function(pokemon){
+     gameState.currentPokemon = gameState.pokemonDB.filter(function(pokemon){
         return pokemon.name == gameState.userPokemon       
      })
      player1img[0].src = gameState.currentPokemon[0].img
 
 
 //  Select Data From Current CPU Pokemon   
-     gameState.currentRivalPokemon = pokemonDB.filter(function(pokemon){
+     gameState.currentRivalPokemon = gameState.pokemonDB.filter(function(pokemon){
         return pokemon.name == gameState.rivalPokemon       
      })     
      player2img[0].src = gameState.currentRivalPokemon[0].img
@@ -83,41 +79,15 @@ while (i < pokemonsEl.length) {
 //  Current User and CPU Pokemon Initial Health
      gameState.currentPokemon[0].health = calculateInitialHealth(gameState.currentPokemon)
      gameState.currentRivalPokemon[0].health = calculateInitialHealth(gameState.currentRivalPokemon)
+
      console.log(gameState)
-//  User Choose Attack
-
-
-//  CPU Health Goes Down
-
-
-//  CPU Attack
-
-
-//  User Health Goes Down
-
-
-
-//  Rock > Scissors
-
-
-//  Paper > Rock
-
-
-//  Scissors > Paper
-
-
-//  Depending on Pokemon Type and Defense is How Hard the Attack is Going to be
-//  and How Much Health it Will Take Out.
-
-
-
-//  Then Whoever Gets to Health < = 0 Loses
     }
+
     i++
 }
 var a = 0
-while (a < attackBtnsEl.length) {
-  attackBtnsEl[a].onclick = function() {
+while (a < gameState.elements.attackBtnsEl.length) {
+  gameState.elements.attackBtnsEl[a].onclick = function() {
     var attackName = this.dataset.attack
     gameState.currentUserAttack = attackName
 //     console.log(gameState.currentUserAttack)
@@ -147,7 +117,7 @@ var attackMove = function(attack, level, stack, critical, enemy, attacker) {
 
 var checkWinner = function(enemy, attacker) {
      if(enemy.health <= 0){
-       console.log('Hey WINNNEEERRR' + attackerName)
+       console.log('Hey WINNNEEERRR' + attacker.name)
      }
 }
 
@@ -264,7 +234,7 @@ var randomNumber = function (min, max) {
 }
 
 var cpuPick = function () {
-    gameState.rivalPokemon = pokemonsEl[randomNumber(0, 3)].dataset.pokemon
+    gameState.rivalPokemon = gameState.elements.pokemonsEl[randomNumber(0, 3)].dataset.pokemon
     
 }
 
