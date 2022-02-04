@@ -48,8 +48,29 @@
         let tween1;
         button1.addEventListener('click', () => {
             tween1 = gsap.fromTo('#box', 
-            { background: 'palevioletred', x: 0, y: 0, width: '100px', height: '100px', borderRadius: 0, opacity: 0 },
-            { background: 'yellow', x: 250, y: 250, width: '200px', height: '200px', borderRadius: '50%', opacity: 1, transformOrigin: '50% 50%', rotation: '+=360', repeat: -1, duration: 2 });
+        { 
+            background: 'palevioletred', 
+            x: 0,
+            y: 0,
+            width: '100px', 
+            height: '100px', 
+            borderRadius: 0, 
+            opacity: 0 
+        },
+        { 
+            background: 'yellow',
+            x: 250, 
+            y: 250, 
+            width: '200px', 
+            height: '200px', 
+            borderRadius: '50%', 
+            opacity: 1, 
+            transformOrigin: '50% 50%', 
+            rotation: '+=360', 
+            repeat: -1, 
+            duration: 2, 
+            yoyo: true 
+        });
         button2.addEventListener('click', () => {
             tween1.play()
         });
