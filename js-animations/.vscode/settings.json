@@ -1,0 +1,11 @@
+{
+    "liveServer.settings.port": ,
+    "liveServer.settings.root": "",
+    "liveServer.settings.CustomBrowser": ,
+    "liveServer.settings.https": {
+        "enable": false,
+        "cert": "",
+        "key": "",
+        "passphrase": ""
+    }
+}
