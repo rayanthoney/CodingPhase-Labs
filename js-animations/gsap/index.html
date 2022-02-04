@@ -12,10 +12,10 @@
             height: 500px;
         }
         #box{
-            background: #c242ce;
+            background: palevioletred;
             width: 100px;
             height: 100px;
-            border-radius: 50%;
+            /* border-radius: 50%; */
         }
         .button1, .button2, .button3, .button4{
             background: gray;
@@ -47,7 +47,9 @@
         let button4 = document.querySelector('.button4');
         let tween1;
         button1.addEventListener('click', () => {
-            tween1 = gsap.fromTo('#box', {x: 500, y: 500}, {x:0, y: 0, duration: 3 });
+            tween1 = gsap.fromTo('#box', 
+            { background: 'palevioletred', x: 0, y: 0, width: '100px', height: '100px', borderRadius: 0, opacity: 0 },
+            { background: 'yellow', x: 250, y: 250, width: '200px', height: '200px', borderRadius: '50%', opacity: 1, transformOrigin: '50% 50%', rotation: '+=360', repeat: -1, duration: 2 });
         button2.addEventListener('click', () => {
             tween1.play()
         });
