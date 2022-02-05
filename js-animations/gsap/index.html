@@ -12,7 +12,7 @@
             height: 500px;
         }
         #box{
-            background: palevioletred;
+            background: teal;
             width: 100px;
             height: 100px;
             /* border-radius: 50%; */
@@ -48,8 +48,8 @@
         let tween1;
 
         button1.addEventListener('click', () => {
-            tween1 = gsap.fromTo('#box', { background: 'palevioletred', x: 0, y: 0, width: '100px', height: '100px' },
-        { background: 'yellow', x: 400, y: 0, duration: 1 });
+            tween1 = gsap.fromTo('#box', { background: 'teal', x: 0, y: 0, width: '100px', height: '100px', borderRadius: "50%" },
+        { background: 'plum', x: 0, y: 400, borderRadius: "50%", duration: 1, ease: "bounce-out" });
 
         button2.addEventListener('click', () => {
             tween1.play()
