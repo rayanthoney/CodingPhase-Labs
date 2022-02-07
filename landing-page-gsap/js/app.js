@@ -40,4 +40,15 @@ tl.fromTo('.logo', {
     ease: Power2.inOut
 },
 ">-1"
+)
+.fromTo('.shape1', {
+    scale: .1,
+    opacity: 0,
+},
+{
+    scale: 1,
+    opacity: 1,
+    ease: Power2.inOut,
+},
+">-1"
 );
