@@ -119,6 +119,8 @@ header .menu li a{
   height: 600px;
   z-index: 2;
   transform: translate3d(300px, 100px, 0);
+  object-fit: cover;
+  object-position: top;
 }
 .shape1{
   position: absolute;

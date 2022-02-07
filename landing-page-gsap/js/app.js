@@ -28,5 +28,16 @@ tl.fromTo('.logo', {
     height: 600,
     duration: 1.4,
     ease: Power2.inOut
-}
+},
+">-.5"
+)
+.fromTo('.boy', {
+    height: 0,
+},
+{
+    height: 600,
+    duration: 1.4,
+    ease: Power2.inOut
+},
+">-1"
 );
