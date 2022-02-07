@@ -110,6 +110,8 @@ header .menu li a{
   height: 600px;
   z-index: 1;
   transform: translate3d(0, -200px, 0);
+  object-fit: cover;
+  object-position: top;
 }
 #home .photos .boy{
   position: absolute;
