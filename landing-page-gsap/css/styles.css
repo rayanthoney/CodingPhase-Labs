@@ -7,7 +7,10 @@
 html,
 body{
   font-family: 'Manrope', sans-serif;
-   background-image: linear-gradient(to right top, #8e27ff, #7b21fa, #651bf5, #4b16f0, #2512eb);
+  background-image: linear-gradient(to right top, #8e27ff, #7b21fa, #651bf5, #4b16f0, #2512eb);
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
 header{
   color: white;
@@ -54,7 +57,7 @@ header .menu li a{
 }
 
 #home .content-area {  
-  height: calc(100vh - 90px);
+  height: calc(100vh);
   display: flex;
   justify-content: center;
   align-items: center;

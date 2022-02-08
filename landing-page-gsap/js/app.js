@@ -63,10 +63,11 @@ tl.fromTo('.logo', {
     ">-.2"
 )
 .fromTo('.shape3', {
-    y: 300,
+    X: 50,
+    y: 550,
 },
 {
-    y: 265,
+    y: 515,
     repeat: -1,
     duration: 1.5,
     ease: "sine.inOut",
@@ -86,10 +87,11 @@ tl.fromTo('.logo', {
 )
 .fromTo('.shape2', 
 {
-    y: -300,
+    x: 550,
+    y: -185,
 },
 {
-    y: -335,
+    y: -135,
     repeat: -1,
     duration: 1.5,
     ease: "sine.inOut",
