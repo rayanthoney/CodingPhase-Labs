@@ -50,12 +50,16 @@ header .menu li a{
   margin: 0 auto;
 }
 #home{
+  /* overflow: hidden; */
+}
+
+#home .content-area {  
   height: calc(100vh - 90px);
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #home .info-section{
   width: 50%;
 }
@@ -107,21 +111,31 @@ header .menu li a{
 #home .photos .girl{
   position: absolute;
   width: 400px;
-  height: 600px;
+  height: 400px;
   z-index: 1;
   transform: translate3d(0, -200px, 0);
   object-fit: cover;
   object-position: top;
+  transition: filter .4s ease-in-out;  
+  cursor: pointer;
 }
 #home .photos .boy{
   position: absolute;
   width: 400px;
-  height: 600px;
+  height: 0px;
   z-index: 2;
   transform: translate3d(300px, 100px, 0);
   object-fit: cover;
   object-position: top;
+  transition: filter .4s ease-in-out;  
+  cursor: pointer;
 }
+
+#home .photos .boy:hover,
+#home .photos .girl:hover {
+  filter: blur(35px);
+}
+
 .shape1{
   position: absolute;
   width: 500px;
