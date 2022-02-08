@@ -27,9 +27,9 @@ tl.fromTo('.logo', {
 {
     height: 600,
     duration: 1.4,
-    ease: Power2.inOut
+    ease: "Power2.inOut",
 },
-">-.5"
+    ">-.5"
 )
 .fromTo('.boy', {
     height: 0,
@@ -37,9 +37,9 @@ tl.fromTo('.logo', {
 {
     height: 600,
     duration: 1.4,
-    ease: Power2.inOut
+    ease: "Power2.inOut",
 },
-">-1"
+    ">-1"
 )
 .fromTo('.shape1', {
     scale: .1,
@@ -48,7 +48,51 @@ tl.fromTo('.logo', {
 {
     scale: 1,
     opacity: 1,
-    ease: Power2.inOut,
+    ease: "Power2.inOut",
 },
-">-1"
+    ">-1"
+)
+.fromTo('.shape3', {
+    opacity: 0,
+},
+{
+    opacity: .6,
+    ease: "Power2.inOut",
+    duration: 1,
+},
+    ">-.2"
+)
+.fromTo('.shape3', {
+    y: 300,
+},
+{
+    y: 265,
+    repeat: -1,
+    duration: 1.5,
+    ease: "sine.inOut",
+    yoyo: true,
+}
+)
+.fromTo('.shape2', 
+{
+    opacity: 0,
+},
+{
+    opacity: .3,
+    ease: "Power2.inOut",
+    duration: 1,
+},
+    ">-2"
+)
+.fromTo('.shape2', 
+{
+    y: -300,
+},
+{
+    y: -335,
+    repeat: -1,
+    duration: 1.5,
+    ease: "sine.inOut",
+    yoyo: true,
+}
 );
