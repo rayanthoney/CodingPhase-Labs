@@ -4,13 +4,15 @@
   font-family: 'Manrope', sans-serif;
   box-sizing: border-box;
 }
-html,
-body{
+html{
   font-family: 'Manrope', sans-serif;
-  background-image: linear-gradient(to right top, #8e27ff, #7b21fa, #651bf5, #4b16f0, #2512eb);
+  background: white;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+}
+body{
+  background-image: linear-gradient(to right top, #8e27ff, #7b21fa, #651bf5, #4b16f0, #2512eb);
 }
 header{
   color: white;
@@ -24,12 +26,6 @@ header{
 header .logo{
   font-weight: 700;
 }
-
-header .logo a{
-  color: white;
-  text-decoration: none;
-}
-
 header .menu ul{
   display: flex;
 }
@@ -59,16 +55,16 @@ header .menu li a{
   margin: 0 auto;
 }
 #home{
+  
   /* overflow: hidden; */
+  
 }
-
-#home .content-area {  
+#home .content-area{
   height: calc(100vh);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 #home .info-section{
   width: 50%;
 }
@@ -120,28 +116,27 @@ header .menu li a{
 #home .photos .girl{
   position: absolute;
   width: 400px;
-  height: 400px;
+  height: 0;
   z-index: 1;
   transform: translate3d(0, -200px, 0);
   object-fit: cover;
   object-position: top;
-  transition: filter .4s ease-in-out;  
+  transition: filter .4s ease-in-out;
   cursor: pointer;
 }
 #home .photos .boy{
   position: absolute;
   width: 400px;
-  height: 0px;
+  height: 0;
   z-index: 2;
-  transform: translate3d(300px, 100px, 0);
   object-fit: cover;
   object-position: top;
-  transition: filter .4s ease-in-out;  
+  transform: translate3d(300px, 100px, 0);
+  transition: filter .4s ease-in-out;
   cursor: pointer;
+  
 }
-
-#home .photos .boy:hover,
-#home .photos .girl:hover {
+#home .photos .boy:hover, #home .photos .girl:hover{
   filter: blur(35px);
 }
 

@@ -1,5 +1,6 @@
-let tl = gsap.timeline()
-tl.fromTo('.logo', {
+const initialPageAnimation = () => {
+    let tl = gsap.timeline()
+tl.fromTo(".logo", {
     x: -200,
     opacity: 0,
 },
@@ -10,7 +11,7 @@ tl.fromTo('.logo', {
     duration: 1.3,
 },
 )
-.fromTo('.menu', {
+.fromTo(".menu", {
     x: 200,
     opacity: 0,
 },
@@ -22,7 +23,7 @@ tl.fromTo('.logo', {
 },
     ">-1.8"
 )
-.fromTo('.info-section h1', {
+.fromTo(".info-section h1", {
     x: 0,
     y: 100,
     opacity: 0,
@@ -36,7 +37,7 @@ tl.fromTo('.logo', {
 },
 )
 .addLabel("h1Show")
-.fromTo('.girl', {
+.fromTo(".girl", {
     height: 0,
 },
 {
@@ -46,7 +47,7 @@ tl.fromTo('.logo', {
 },
     ">-.5"
 )
-.fromTo('.boy', {
+.fromTo(".boy", {
     height: 0,
 },
 {
@@ -56,7 +57,7 @@ tl.fromTo('.logo', {
 },
     ">-1"
 )
-.fromTo('.shape1', {
+.fromTo(".shape1", {
     scale: .1,
     opacity: 0,
 },
@@ -67,7 +68,7 @@ tl.fromTo('.logo', {
 },
     ">-1"
 )
-.fromTo('.shape3', {
+.fromTo(".shape3", {
     opacity: 0,
 },
 {
@@ -77,7 +78,7 @@ tl.fromTo('.logo', {
 },
     ">-.2"
 )
-.fromTo('.shape3', {
+.fromTo(".shape3", {
     x: -50,
     y: 500,
 },
@@ -89,7 +90,7 @@ tl.fromTo('.logo', {
     yoyo: true,
 },
 )
-.fromTo('.shape2', 
+.fromTo(".shape2", 
 {
     opacity: 0,
 },
@@ -100,7 +101,7 @@ tl.fromTo('.logo', {
 },
     ">-2"
 )
-.fromTo('.shape2', 
+.fromTo(".shape2", 
 {
     x: 550,
     y: -185,
@@ -113,7 +114,7 @@ tl.fromTo('.logo', {
     yoyo: true,
 }
 )
-.fromTo('.info-section h4', {
+.fromTo(".info-section h4", {
     x: -50,
     opacity: 0,
 },
@@ -124,7 +125,7 @@ tl.fromTo('.logo', {
 }, 
 "h1Show"
 )
-.fromTo('.call-actions', {
+.fromTo(".call-actions", {
     x: -50,
     opacity: 0,
 },
@@ -135,3 +136,20 @@ tl.fromTo('.logo', {
 }, 
 "h1Show+=1"
 );
+}
+
+
+barba.init({
+    sync: true,
+    transitions: [
+        {
+         name: "page-wipe",
+         async leave(data){
+             console.log("Leaving Page Animation");
+         },
+         async enter(data)   {
+             console.log("Entering Page Animation");
+         }
+        }
+    ]
+})
