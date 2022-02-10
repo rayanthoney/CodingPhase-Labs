@@ -138,14 +138,23 @@ tl.fromTo(".logo", {
 );
 }
 
-
+const delay = (n) => {
+    return new Promise((done) => {
+        setTimeout(() => {
+            done();
+        }, n)
+    })
+}
 barba.init({
     sync: true,
     transitions: [
         {
          name: "page-wipe",
          async leave(data){
+             const done = this.async();
              console.log("Leaving Page Animation");
+             await delay(2000);
+             done();
          },
          async enter(data)   {
              console.log("Entering Page Animation");
