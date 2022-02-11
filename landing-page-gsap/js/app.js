@@ -145,6 +145,23 @@ const delay = (n) => {
         }, n)
     })
 }
+const loadingLeave = () => {
+    let timeline = gsap.timeline();
+    timeline.fromTo('.loading-bg', {
+        y:'100%',
+    }, {
+        y:0,
+    });
+};
+const loadingEnter = () => {
+    let timeline = gsap.timeline();
+    timeline.fromTo('.loading-bg', {
+        y:0
+    }, {
+        y:'100%',
+        duration:2
+    })
+}
 barba.init({
     sync: true,
     transitions: [
@@ -153,11 +170,17 @@ barba.init({
          async leave(data){
              const done = this.async();
              console.log("Leaving Page Animation");
+             loadingLeave();
              await delay(2000);
              done();
          },
-         async enter(data)   {
+         async enter(data){
+             loadingEnter();             
+             initialPageAnimation();
              console.log("Entering Page Animation");
+         },
+         async once(data){             
+             initialPageAnimation()
          }
         }
     ]

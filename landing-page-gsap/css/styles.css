@@ -4,13 +4,26 @@
   font-family: 'Manrope', sans-serif;
   box-sizing: border-box;
 }
-html,
-body{
+html{
   font-family: 'Manrope', sans-serif;
-  background-image: linear-gradient(to right top, #8e27ff, #7b21fa, #651bf5, #4b16f0, #2512eb);
+  background: white;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+}
+body{
+  background-image: linear-gradient(to right top, #8e27ff, #7b21fa, #651bf5, #4b16f0, #2512eb);
+  padding-bottom: 50px;
+}
+.loading-bg{
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  transform: translate(0, 100%);
 }
 header{
   color: white;
