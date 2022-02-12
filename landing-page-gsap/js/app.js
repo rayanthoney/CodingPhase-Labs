@@ -171,7 +171,7 @@ barba.init({
              const done = this.async();
              console.log("Leaving Page Animation");
              loadingLeave();
-             await delay(2000);
+             await delay(1500);
              done();
          },
          async enter(data){
