@@ -137,7 +137,6 @@ tl.fromTo(".logo", {
 "h1Show+=1"
 );
 }
-
 const delay = (n) => {
     return new Promise((done) => {
         setTimeout(() => {
@@ -162,6 +161,42 @@ const loadingEnter = () => {
         duration:2
     })
 }
+
+// Gallery
+const galleryEnter = () => {
+    let timeline = gsap.timeline();
+    timeline
+    .fromTo(
+        '.white-bg',
+        {
+            y: 50,
+            opacity: 0
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: .8,
+            stagger: .2,
+            ease: 'power1.inOut'
+        }
+        )
+    .fromTo(
+        '.white-bg ul li',
+        {
+            y: 50,
+            opacity: 0
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: .4,
+            stagger: .2,
+            ease: 'power1.inOut'
+        }
+    )
+}
+galleryEnter()
+
 barba.init({
     sync: true,
     transitions: [
@@ -180,8 +215,51 @@ barba.init({
              console.log("Entering Page Animation");
          },
          async once(data){             
-             initialPageAnimation()
-         }
-        }
-    ]
-})
+             initialPageAnimation();
+         },
+        },
+        {
+         name: "gallery-transition",
+         from: {
+             namespace: ['home', 'about']
+         },
+         to: {
+             namespace: ['gallery']
+         },
+         async leave(data){
+             const done = this.async();
+             console.log("Leaving Page Animation");
+             loadingLeave();
+             await delay(1500);
+             done();
+         },
+         async enter(data){
+             loadingEnter();
+             galleryEnter();
+             console.log("Entering Page Animation");
+         }         
+        },
+    ],
+
+    views: [
+//         {
+//     namespace: 'index',
+//     beforeLeave(data) {
+//       // do something before leaving the current `index` namespace
+//     }
+//   }, 
+{
+    namespace: 'about',
+    afterEnter(data) {
+      loadingEnter();
+    },  
+},
+{
+    namespace: 'gallery',
+    afterEnter(data) {
+      loadingEnter();
+      galleryEnter();
+    },
+  },
+],
+});

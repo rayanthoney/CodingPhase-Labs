@@ -217,7 +217,7 @@ header .menu li a{
   overflow: hidden;
 }
 
-#galllery .white-bg ul li .hover-bg{
+#gallery .white-bg ul li .hover-bg{
   position: absolute;
   top: 0;
   left: 0;
@@ -228,7 +228,7 @@ header .menu li a{
   cursor: pointer;
 }
 
-#galllery .white-bg ul li:hover .hover-bg{
+#gallery .white-bg ul li:hover .hover-bg{
   transform: translate(0,100%);
 }
 
