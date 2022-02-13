@@ -157,7 +157,6 @@ header .menu li a{
 #home .photos .girl:hover {
   filter: blur(35px);
 }
-
 .shape1{
   position: absolute;
   width: 500px;
@@ -188,6 +187,16 @@ header .menu li a{
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
+/* SCROLL SECTIONS */
+#main-services{
+}
+#main-services .black-bg{ 
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
 #gallery .content-area{
   min-height: calc(100vh - 90px);
 }
