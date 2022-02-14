@@ -286,12 +286,12 @@ tlServicesScroll.fromTo('#main-services', {
 }, {
     x: 0
 })
-const serviceElement = document.querySelector('#main-services')
+const serviceElement = document.querySelector('#main-services');
 
 let homeController = new ScrollMagic.Controller();
 
 let serviceScene = new ScrollMagic.Scene({
-     triggerElement: 'main-services',
+     triggerElement: '#main-services',
      triggerHook: 1,
      duration: serviceElement.offsetHeight
 })
