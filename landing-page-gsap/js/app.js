@@ -1,3 +1,5 @@
+
+// Page Transition Animations
 const initialPageAnimation = () => {
     let tl = gsap.timeline()
 tl.fromTo(".logo", {
@@ -137,6 +139,7 @@ tl.fromTo(".logo", {
 "h1Show+=1"
 );
 }
+
 const delay = (n) => {
     return new Promise((done) => {
         setTimeout(() => {
@@ -144,14 +147,20 @@ const delay = (n) => {
         }, n)
     })
 }
+
 const loadingLeave = () => {
     let timeline = gsap.timeline();
-    timeline.fromTo('.loading-bg', {
-        y:'100%',
-    }, {
-        y:0,
-    });
+    timeline.fromTo(
+        '.loading-bg', 
+        {
+            y:'100%',
+        }, 
+        {
+            y:0,
+        }
+    );
 };
+
 const loadingEnter = () => {
     let timeline = gsap.timeline();
     timeline.fromTo('.loading-bg', {
@@ -195,7 +204,7 @@ const galleryEnter = () => {
         }
     )
 }
-galleryEnter()
+// galleryEnter()
 
 barba.init({
     sync: true,
@@ -263,3 +272,29 @@ barba.init({
   },
 ],
 });
+
+
+// Scroll Animation
+const tlServicesScroll = new gsap.timeline({
+    onUpdate: debugPercentage
+})
+function debugPercentage(){
+    console.log(tlServicesScroll.progress())
+}
+tlServicesScroll.fromTo('#main-services', {
+    x: '100%',
+}, {
+    x: 0
+})
+const serviceElement = document.querySelector('#main-services')
+
+let homeController = new ScrollMagic.Controller();
+
+let serviceScene = new ScrollMagic.Scene({
+     triggerElement: 'main-services',
+     triggerHook: 1,
+     duration: serviceElement.offsetHeight
+})
+.setTween(tlServicesScroll)
+.addIndicators()
+.addTo(homeController)

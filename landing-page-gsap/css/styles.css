@@ -13,7 +13,6 @@ html{
 }
 body{
   background-image: linear-gradient(to right top, #8e27ff, #7b21fa, #651bf5, #4b16f0, #2512eb);
-  padding-bottom: 50px;
 }
 .loading-bg{
   background: white;
@@ -73,6 +72,7 @@ header .menu li a{
 }
 #home{
   /* overflow: hidden; */
+  padding-bottom: 50px;
 }
 
 #home .content-area {  
@@ -189,14 +189,57 @@ header .menu li a{
 
 /* SCROLL SECTIONS */
 #main-services{
+
+
 }
+
 #main-services .black-bg{ 
   height: 100vh;
   background: black;
   display: flex;
   justify-content: center;
   align-items: center; 
+  color: white;
 }
+
+#main-services h2{
+  font-size: 3rem;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#main-services .services {
+  display: grid; 
+  color: white;
+  min-width: 1200px;  
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  /* background: red; */
+}
+
+#main-services .services .service{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-services .services .service .icon-circle{
+  background: red;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#test{
+  background: #1b1b1b;
+  height: 100vh;
+}
+
 #gallery .content-area{
   min-height: calc(100vh - 90px);
 }
