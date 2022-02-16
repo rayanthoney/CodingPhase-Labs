@@ -1,0 +1,14 @@
+{
+  "name": "ram-dev-kit",
+  "version": "1.0.0",
+  "description": "My first Starter/Dev Kit ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RayAnthoney",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
