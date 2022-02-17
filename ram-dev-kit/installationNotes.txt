@@ -1,0 +1,31 @@
+cd into your project folder
+then cd into your project/ie: starter-kit.
+
+npm init
+    creates a package.json file with package contents, Name of projects, Author, and dependancies...
+
+Create folders inside package (ie: starter-kit)starter-kit/public
+starter-kit/src
+
+Next we install gulp inside the package (project/ie: starter-kit)
+
+First indtall Globally!
+    npm install gulp-cli -g <!-- GLOBALLY -->
+    npm indtall gulp -D <!-- LOCAL INSIDE PKG AS devDependancies -->
+    npm install gulp --save <!-- LOCAL INSIDE PKG AS dependancies -->
+    npm install gulp@3.9.1 <!-- REVERTS TO PRIOR VER. -->
+
+Next we install sass
+    npm install sass gulp-sass --save-dev
+
+Next we need to add this to our gulgfile.js    
+    const sass = require('gulp-sass')(require('sass'));
+
+    gulp.task('sass', function () {
+    return gulp.src('./src/scss/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./public/css'));
+    });
+Next create main.scss, layout.scss, and _header.scss inside your starter-kit/src/scss folder. 
+Run gulp sass in terminal and this should create a main.css and layout.css inside starter-kit/public/css.
+
