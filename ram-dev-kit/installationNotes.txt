@@ -29,3 +29,7 @@ Next we need to add this to our gulgfile.js
 Next create main.scss, layout.scss, and _header.scss inside your starter-kit/src/scss folder. 
 Run gulp sass in terminal and this should create a main.css and layout.css inside starter-kit/public/css.
 
+
+
+npm install gulp-sourcemaps --save-dev
+
