@@ -9,16 +9,27 @@
   "author": "RayAnthoney",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015-node": "^6.1.1",
+    "babel-preset-react-app": "^10.0.1",
+    "babel-preset-stage-0": "^6.24.1",
     "browser-sync": "^2.27.7",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.49.7"
+    "sass": "^1.49.7",
+    "webpack": "^5.69.1"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "acorn": "^8.7.0"
+  }
 }

@@ -12,6 +12,10 @@ const cleanCSS = require("gulp-clean-css");
 
 const sourcemaps = require('gulp-sourcemaps');
 
+const webpack = require('webpack')
+
+const path = require('path')
+
 gulp.task("sass", function () {
   return gulp
     .src("./src/scss/**/*.scss")
