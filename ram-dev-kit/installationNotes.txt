@@ -33,3 +33,25 @@ Run gulp sass in terminal and this should create a main.css and layout.css insid
 
 npm install gulp-sourcemaps --save-dev
 
+=======================================
+all packages
+=======================================
+sudo apt install nodejs
+npm init (creates package.json you fill out)
+    or 
+npm init --yes (creates package.json (Default))
+"gulp": "^3.9.1"
+"sass": "^1.49.7"
+"gulp-sass": "^5.1.0",
+"gulp-autoprefixer": "^8.0.0"
+"browser-sync": "^2.27.7"
+"gulp-clean-css": "^4.3.0"
+"gulp-sourcemaps": "^3.0.0"
+"browser-sync": "^2.27.7"
+"@babel/core": "^7.17.5"
+"@babel/preset-env": "^7.16.11"
+"babel-loader": "^8.2.3"
+"babel-plugin-transform-class-properties": "^6.24.1"
+"babel-preset-es2015-node": "^6.1.1"
+"babel-preset-react-app": "^10.0.1"
+"babel-preset-stage-0": "^6.24.1"
