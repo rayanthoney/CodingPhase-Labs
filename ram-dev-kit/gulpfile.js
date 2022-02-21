@@ -1,19 +1,11 @@
 const gulp = require("gulp");
-
 const sass = require("gulp-sass")(require("sass"));
-
 const autoprefixer = require("gulp-autoprefixer");
-
 const browserSync = require("browser-sync").create();
-
 const reload = browserSync.reload;
-
 const cleanCSS = require("gulp-clean-css");
-
 const sourcemaps = require('gulp-sourcemaps');
-
 const webpack = require('webpack');
-
 const path = require('path')
 
 gulp.task("sass", function () {
