@@ -59,8 +59,53 @@
         name: "Kairos",
         username: "MireyaElisse",
         favoriteMovies: ['SW', 'Lord Of The Flies'],
-        age: 10,
+        age: 24,
         princeCity: function () {
             return 'New York City'
-        }
+        },
+        objectA: {
+            objectB: 245
+        }    
     };
+    
+    console.log(user.objectA.objectB)
+
+// Booleans - is it true or false
+    console.log(4 < 10);
+
+// Control Flow
+    if(age >=21){
+        console.log("User Can Drink!!")
+    } else {
+        console.log('Sorry your too young go home!!')
+    }
+
+// Expressions vs statements
+    console.log(20 > 30 ? "true" : "false")
+
+// Functions - reusable code blocks
+    function printName(first, last) {
+        console.log(first + " " + last); // printName
+        return first + ' ' + last; // console.log
+    }
+    // console.log( "Ray" + " " + "Anthoney")
+    // console.log( "Mireya" + " " + "Elisse")
+    // console.log( "Ashleigh" + " " + "Marie")
+
+    printName("Ray", "Anthoney");
+    printName("Mireya", "Elisse");
+    printName("Ashleigh", "Marie");
+
+// Loops - are repeatable code blocks
+for(let i = 1; i < 11; i++){
+    printName("Ray", "Anthoney");
+    // console.log(i) // will run #'s 1 - 10
+}
+
+// Null, Infinity, NaN, Undefined,
+let car = null;
+console.log(car);
+console.log(1/0);
+console.log(24 * "Billy");
+    
+    
