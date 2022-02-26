@@ -75,9 +75,9 @@
 	padding: 15px;
 }
 
-.side-img-size {
+/* .side-img-size {
 	max-height: 500px;
-}
+} */
 
 .email-modal__info .logo {
 	margin-bottom: 4rem;
@@ -115,9 +115,25 @@
 }
 
 .email-modal__button {
-	background: rgba(81, 158, 71);
+	background: rgba(81, 158, 71, 1);
 	color: white;
 	border: 0;
 	width: 150px;
 	cursor: pointer;
+}
+
+.email-modal__decline-offer {
+	color: rgba(221, 221, 221, 0.6);
+	text-decoration: underline;
+	font-size: 0.9rem;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+
+.email-modal__decline-offer:hover {
+	color: white;
+}
+
+.email-modal__side-img img {
+	height: 400px;
 }
