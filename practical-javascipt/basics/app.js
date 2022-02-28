@@ -13,7 +13,7 @@
 // "Everything in programming is an an action that triggers a reaction"
 
 // Variables - is a bucket that you give data 
-    let username = "Ray Anthoney";
+    let username = "Ray Anthoney"
     console.log(username)
     username = "Mireya Elisse";
     console.log(username);
