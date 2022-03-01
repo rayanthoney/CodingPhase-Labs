@@ -103,11 +103,16 @@
 	background: white;
 	display: flex;
 	padding: 5px;
-	margin-bottom: 20px;
+	margin-bottom: 1.2rem;
+}
+
+.email-modal__form-group--error {
+	border: 1px solid red;
 }
 
 .email-modal__input {
 	background: white;
+	color: black;
 	border: 0px solid;
 	display: flex;
 	width: 100%;
@@ -120,6 +125,17 @@
 	border: 0;
 	width: 150px;
 	cursor: pointer;
+}
+
+.email-modal__error-message {
+	color: #fbe743;
+	margin-bottom: 0.7rem;
+	font-size: 0.8rem;
+	display: none;
+}
+
+.email-modal__error-message--active {
+	display: block;
 }
 
 .email-modal__decline-offer {
