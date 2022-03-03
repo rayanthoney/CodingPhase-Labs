@@ -38,6 +38,7 @@
 	width: 100%;
 	background: #1b1b1b;
 	position: relative;
+	overflow: hidden;
 }
 
 .jumbo-slider__slide {
@@ -176,6 +177,25 @@
 }
 
 .jumbo-slider__circle--filled {
+	background: #03fc7f;
+}
+
+.jumbo-slider__timeline {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 4;
+}
+
+.jumbo-slider__line {
+	height: 5px;
+	width: 0;
+	background: var(--light-font);
+	transition: width 6s ease-in-out;
+}
+
+.jumbo-slider__slide--active .jumbo-slider__line {
+	width: 100%;
 	background: #03fc7f;
 }
 
