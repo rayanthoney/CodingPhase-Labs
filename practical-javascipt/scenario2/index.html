@@ -11,7 +11,9 @@
     <title>Document</title>
 
     <!-- Google Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">     
 
     <!-- External Custom Style Sheets -->
     <link rel="stylesheet" href="css/reset.css">
@@ -35,11 +37,23 @@
     <main>
         <section class="jumbo-slider">
             <ul class="jumbo-slider__container">
-                <li class="jumbo-slider__slide">
-                    <div class="jumbo_slider__slide-bg"
-                        style="background: url('https://www.mercedes-benz.com/content/dam/brandhub/mbsocialcar/mbsocialcar-mercedes-amg-gt-r/Mercedes-AMG-GT-R-Wallpaper-01.zip_extracted/01-mercedes-amg-gt-r-c-190-wallpaper-3840x2160.jpg');">
-
+                <li class="jumbo-slider__slide" attr="1">
+                    <div class="jumbo-slider__slide-bg"
+                        style="background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.thecarhp.com%2Fimages%2Fnews%2Ffeatured_2021-jeep-grand-cherokee-trackhawk-review-performance-interiors-features-pricing-and-rivals_1594616673.jpg%3Ffb%3Dimages%2Fthecarhp-no-image.png%26oi%3Dimages%2Fthecarhp_logo_white.png%26ox%3D10%26oy%3D10%26ow%3D103.33333333333333%26w%3D1260%26h%3D630&f=1&nofb=1')">
                     </div>
+                    <div class="container">
+                        <div class="jumbo-slider__info">
+                            <div class="jumbo-slider__slide-number">
+                                01
+                            </div>
+                            <div class="jumbo-slider__title">
+                                A Legacy Extended, The Start of a Grand Journey
+                            </div>
+                            <p class="jumbo-slider__description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus culpa ipsam, illo iure officiis odio cupiditate sed adipisci minima, blanditiis tempore consequatur tenetur laboriosam? Aperiam error officia consectetur doloribus quia, facere rerum pariatur culpa harum, ipsum deleniti neque perspiciatis odit eligendi rem maiores incidunt id. Explicabo fuga harum cumque eaque.
+                            </p>
+                        </div>
+                    </div>                    
                 </li>
             </ul>
             <div class="jumbo-slider__nav">
@@ -48,14 +62,12 @@
                 <a href="" class="jumbo-slider__link">03 Gladiator</a>
             </div>
             <div class="jumbo-slider__elipsis">
-                <div class="jumbo-slider__circle jumbo-slider__circle--filled"></div>
+                <div class="jumbo-slider__circle jumbo-slider__circle--filled">      
+                </div>
                 <div class="jumbo-slider__circle"></div>
                 <div class="jumbo-slider__circle"></div>
             </div>
         </section>
     </main>
-
-
 </body>
-
 </html>
