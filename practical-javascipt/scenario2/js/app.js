@@ -16,7 +16,7 @@ let init = () => {
 
 	// Update elipses and links
 	let updateNav = () => {
-		console.log(`update current: ${current}`);
+		// console.log(`update current: ${current}`);
 		for (let index = 0; index < slides.length; index++) {
 			links[index].classList.remove("jumbo-slider__link--active");
 			circles[index].classList.remove("jumbo-slider__circle--filled");
@@ -25,21 +25,27 @@ let init = () => {
 		links[current - 1].classList.add("jumbo-slider__link--active");
 		circles[current - 1].classList.add("jumbo-slider__circle--filled");
 	};
+	// Variable to start the jumbo-slider to transition between pages using the setInterval method
 	let startSliding = () => {
 		setInterval(() => {
 			// console.log(`current: ${current}`);
+
+			// Remove from active from first and add it to the second slide do it can become the first slide with the class actived
 			slides[1].classList.add("jumbo-slider__slide--active");
 			slides[0].classList.remove("jumbo-slider__slide--active");
+			// Clone the first slide and place it on the last space
+			container.appendChild(slides[0].cloneNode([true]));
+			// Then remove the first slide after it has been cloned
+			container.removeChild(slides[0]);
 
-			console.log(`slides: ${slides.length} `);
+			// console.log(`slides: ${slides.length} `);
 			if (current < slides.length) {
 				current++;
 				updateNav(current);
 			} else {
 				current = 1;
+				updateNav(current);
 			}
-			container.appendChild(slides[0].cloneNode([true]));
-			container.removeChild(slides[0]);
 		}, time);
 	};
 	startSliding();
