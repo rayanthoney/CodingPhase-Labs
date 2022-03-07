@@ -3,13 +3,13 @@
 	margin: 0;
 	box-sizing: border;
 }
-
-body {
+/* 
+.wrapper {
 	background: #197278;
 	min-height: 100vh;
 }
 
-body::before {
+.wrapper::before {
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -19,7 +19,7 @@ body::before {
 	background: linear-gradient(#c44536, #772e25);
 	clip-path: circle(30% at left 70%);
 }
-body::after {
+.wrapper::after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -136,4 +136,4 @@ body::after {
 .card__icon--db:hover {
 	background: #f962b1;
 	color: white;
-}
+} */
