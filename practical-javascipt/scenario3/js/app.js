@@ -206,15 +206,6 @@ root.prepend(style);
 style.innerHTML = cssStyles;
 card.innerHTML = html;
 let cardSocials = card.getElementsByClassName("card__socials")[0];
-let temp = `
-<div class="card__icon card__icon--fb">
-            <span class="card__icon-box">
-                <i class="fab fa-facebook-f"></i>
-            </span>
-            <span class="card__icon-title">
-                Facebook
-            </span>
-        </div>`;
 
 data.socials.forEach((item, index) => {
 	let tempNode = document.createElement("div");
