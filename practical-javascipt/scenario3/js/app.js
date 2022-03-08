@@ -1,5 +1,3 @@
-// let root = document.getElementsByClassName("root")[0];
-
 // Object:
 let data = {
 	fullName: "Memo Brown",
@@ -31,25 +29,25 @@ let data = {
 		},
 	],
 };
+let cardApp = (data) => {
+	let body = document.getElementsByTagName("body")[0];
+	let root = document.createElement("div");
+	let style = document.createElement("style");
+	let card = document.createElement("section");
+	let html = `
+    <div class="card__wrapper">
+        <img src="img/memoBrown.png" alt="User Image" class="card__user-img ">
+        <div class="card__info">
+            <span class="card__name">${data.fullName}</span>
+            <span class="card__title">${data.position}</span>
+        </div>
 
-let style = document.createElement("style");
-let root = document.createElement("div");
-let body = document.getElementsByTagName("body")[0];
-let card = document.createElement("section");
-let html = `
-<div class="card__wrapper">
-    <img src="img/memoBrown.png" alt="User Image" class="card__user-img ">
-    <div class="card__info">
-        <span class="card__name">${data.fullName}</span>
-        <span class="card__title">${data.position}</span>
+        <div class="card__socials">
+            
+        </div>
     </div>
-
-    <div class="card__socials">
-        
-    </div>
-</div>
 `;
-let cssStyles = `
+	let cssStyles = `
     .wrapper {
         background: #197278;
         min-height: 100vh;
@@ -85,8 +83,8 @@ let cssStyles = `
     }
 
     .card__wrapper {
-        height: 400px;
-        padding: 20px;
+        // height: 400px;
+        padding: 20px 20px 3rem 20px;
         max-width: 300px;
         width: 100%;
         background: white;
@@ -194,23 +192,25 @@ let cssStyles = `
         color: white;
     }
 `;
-body.prepend(root);
-root.classList.add("root");
-card.classList.add("card");
-root.prepend(card);
-root.style.cssText = `
+
+	body.prepend(root);
+	root.classList.add("root");
+	root.prepend(card);
+	root.style.cssText = `
 background: #197278;
 min-height: 100vh;
 `;
-root.prepend(style);
-style.innerHTML = cssStyles;
-card.innerHTML = html;
-let cardSocials = card.getElementsByClassName("card__socials")[0];
+	root.prepend(style);
+	card.classList.add("card");
+	style.innerHTML = cssStyles;
+	card.innerHTML = html;
 
-data.socials.forEach((item, index) => {
-	let tempNode = document.createElement("div");
-	tempNode.classList.add(`card__icon`, `card__icon--${item.id}`);
-	tempNode.innerHTML = `
+	let cardSocials = card.getElementsByClassName("card__socials")[0];
+
+	data.socials.forEach((item, index) => {
+		let tempNode = document.createElement("div");
+		tempNode.classList.add(`card__icon`, `card__icon--${item.id}`);
+		tempNode.innerHTML = `
         <span class="card__icon-box">
             <i class="${item.icon}"></i>
         </span>
@@ -218,6 +218,8 @@ data.socials.forEach((item, index) => {
             ${item.service}
         </span>    
     `;
-	cardSocials.append(tempNode);
-});
-console.log(card);
+		cardSocials.append(tempNode);
+	});
+};
+
+cardApp(data);
