@@ -1,0 +1,20 @@
+1. Everything in JavaScript is an Object
+2. Define Method
+3. Define Nodes
+
+<!-- div = Element Node -->
+   <div class="box">
+       <!-- src = Attribute node -->
+       <img src="b.jpg" alt="">
+       <!-- Title = Text Node -->
+       <span>Title</span>
+   </div>
+
+
+   Covered:
+    Document
+    windows screen
+    Nodes
+    target elements and types
+
+
