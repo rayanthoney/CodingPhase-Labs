@@ -33,3 +33,10 @@ let titleText = document.createTextNode('Mary had a lil lamb');
 h1.appendChild(titleText)
 // add the newly created element and its content into the DOM
 document.body.appendChild(h1)
+
+
+main.innerHTML =
+`<div>
+    <h2>Lorem Doodle</h2>
+    <img src="https://doodleipsum.com/700/flat?i=1fd425a431f7f9d55bb237a7c39f3f73">
+</div>`
