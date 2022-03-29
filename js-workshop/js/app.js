@@ -22,5 +22,14 @@ let box = document.getElementsByClassName('box')
 let printBox = (index) => {
     return `This box has a height ${box[index].clientHeight} and a width of ${box[index].clientWidth}`
 }
-console.log(printBox(0))
-document.create
+
+
+
+// create an h1 element
+let h1 = document.createElement('h1');
+// give it some content
+let titleText = document.createTextNode('Mary had a lil lamb');
+// add text node to the newly created h1
+h1.appendChild(titleText)
+// add the newly created element and its content into the DOM
+document.body.appendChild(h1)
