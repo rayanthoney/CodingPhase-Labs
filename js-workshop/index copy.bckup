@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JS Workshop</title>
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+   <!-- <h1 id="main"> Hello Codingphase World! :)</h1> -->
+   <!-- div = Element Node -->
+   <!-- <div class="box"> -->
+       <!-- src = Attribute node -->
+       <!-- <img src="https://doodleipsum.com/700/flat?i=1fd425a431f7f9d55bb237a7c39f3f73" alt=""> -->
+       <!-- Title = Text Node -->
+       <!-- <span>lorem</span> -->
+   <!-- </div> -->
+
+   <div id="main">DEMO TESTING</div>
+    <div class="box">
+        <span>Box1</span>
+    </div>
+
+    <div class="box">
+        <span>Box2</span>
+    </div>
+
+
+
+
+
+
+<script src="/js/app.js"></script>
+</body>
+</html>
