@@ -61,6 +61,9 @@ body {
     height: 50px;
     border-radius: 50%;
     background: #c5fb4c;
+    transition: all 7s ease-in-out;
+    position: relative;
+    left: 0;
 }
 
 .btn-group {
