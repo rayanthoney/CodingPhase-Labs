@@ -1,0 +1,38 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap');
+@import "top-section.css";
+@import "services.css";
+
+/******************************************
+/* CSS
+/*******************************************/
+:root {
+	--bgdarkGreen: #1b201c;
+	--lime: #c5fb4c;
+	--white: #fff;
+	--fontDark: #16171b;
+	--fontGray: #919191;
+	--babyBlue: #dbf1ff;
+	--dkBlue: #52b8ff;
+	--red: #ff5253;
+	--yellow: #ffc853;
+	--ltGray: #b3b3b3;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+
+}
+
+.container {
+	max-width: 1150px;
+	margin: 0 auto;
+}
+
+h2 {
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
