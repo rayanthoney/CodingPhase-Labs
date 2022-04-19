@@ -1,8 +1,8 @@
-#services {
+#services-section-section {
     padding: 80px 15px;
 }
 
-#services .title {
+#services-section .title {
     position: relative;
     width: 200px;
     height: 200px;
@@ -13,7 +13,7 @@
 
 }
 
-#services .title .circle {
+#services-section .title .circle {
     background: var(--babyBlue);
     width: 150px;
     height: 150px;
@@ -22,7 +22,7 @@
     top: 23px;
 }
 
-#services .title h1 {
+#services-section .title h1 {
     position: relative;
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -32,32 +32,32 @@
     letter-spacing: 4px;
 }
 
-#services .services-container {
+#services-section .services-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
 }
 
-#services .services-container .box {
+#services-section .services-container .box {
     background-color: rgba(255, 255, 255, 0);
     padding: 40px;
     transition: all .4s ease ease-in-out;
     cursor: pointer;
 }
 
-#services .services-container .box:hover {
+#services-section .services-container .box:hover {
     background-color: rgba(255, 255, 255, 1);
     -webkit-box-shadow: 0px 40px 74px 24px rgba(0,0,0,0.08);
     -moz-box-shadow: 0px 40px 74px 24px rgba(0,0,0,0.08);
     box-shadow: 0px 40px 74px 24px rgba(0,0,0,0.08);
 }
 
-#services .services-container .box .fa-solid {
+#services-section .services-container .box .fa-solid {
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
-#services .services-container .box h5 {
+#services-section .services-container .box h5 {
     font-size: .9rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -65,20 +65,20 @@
     margin-bottom: 2rem;
 }
 
-#services .services-container .box p {
+#services-section .services-container .box p {
     line-height: 1.5;
     font-size: .8rem;
     color: var(--ltGray);
 }
 
-#services .services-container .box.blue {
+#services-section .services-container .box.blue {
     border-bottom: 2px solid var(--dkBlue);
 }
 
-#services .services-container .box.red {
+#services-section .services-container .box.red {
     border-bottom: 2px solid var(--red);
 }
 
-#services .services-container .box.yellow {
+#services-section .services-container .box.yellow {
     border-bottom: 2px solid var(--yellow);
 }
