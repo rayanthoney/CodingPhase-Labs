@@ -11,11 +11,11 @@ let state = {
 //  DECLARED THE VARIABLES
 let totalLoan,
 	totalMonths,
-	monthlyInterest = 200,
-	monthlyPrincipalInterest = 330,
-	monthlyPopertyTaxes = 355,
-	monthlyHomeInsurance = 100,
-	monthlyHOA = 100,
+	monthlyInterest,
+	monthlyPrincipalInterest,
+	monthlyPopertyTaxes,
+	monthlyHomeInsurance,
+	monthlyHOA,
 	labels = ["Principal & Interest", "Property Tax", "Home Insurance", "HOA"],
 	backgroundColor = [
 		"rgba(255, 99, 132, 0.2)",
@@ -67,6 +67,10 @@ let inputTexts = document.getElementsByClassName("form-group__textInput");
 for (i = 0; i < inputTexts.length; i++) {
 	inputTexts[i].addEventListener("input", updateInputStates);
 }
+let inputSlides = document.getElementsByClassName("form-group__range-slide");
+for (i = 0; i < inputSlides.length; i++) {
+	inputSlides[i].addEventListener("input", updateInputStates);
+}
 
 function updateInputStates(event) {
 	let name = event.target.name;
@@ -74,11 +78,23 @@ function updateInputStates(event) {
 	if (name == "price") {
 		value = getNumber(value);
 	}
+	if (event.target.type == "range") {
+		let total = (document.getElementsByClassName(
+			`total__${name}`
+		)[0].innerHTML = `${value}`);
+	}
 	state = {
 		...state,
 		[name]: value,
 	};
 	console.log(state);
 }
+// PREVENTS THE DEFAULT FUNCTION OF THE FORM
+document.getElementsByTagName("form")[0].addEventListener("submit", (event) => {
+	event.preventDefault();
+	document
+		.getElementsByClassName("mg-page__right")[0]
+		.classList.add("mg-page__right--animate");
+});
 
 console.log(inputTexts);
