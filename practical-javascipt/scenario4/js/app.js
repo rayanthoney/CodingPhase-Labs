@@ -16,6 +16,7 @@ let totalLoan,
 	monthlyPopertyTaxes,
 	monthlyHomeInsurance,
 	monthlyHOA,
+	monthlyTotal,
 	labels = ["Principal & Interest", "Property Tax", "Home Insurance", "HOA"],
 	backgroundColor = [
 		"rgba(255, 99, 132, 0.2)",
@@ -87,7 +88,7 @@ function updateInputStates(event) {
 		...state,
 		[name]: value,
 	};
-	console.log(state);
+	calculateData();
 }
 // PREVENTS THE DEFAULT FUNCTION OF THE FORM
 document.getElementsByTagName("form")[0].addEventListener("submit", (event) => {
@@ -95,6 +96,59 @@ document.getElementsByTagName("form")[0].addEventListener("submit", (event) => {
 	document
 		.getElementsByClassName("mg-page__right")[0]
 		.classList.add("mg-page__right--animate");
+	calculateData();
 });
 
-console.log(inputTexts);
+function calculateData() {
+	totalLoan = state.price - state.price * (state.down_payment / 100);
+	totalMonths = state.loan_years * 12;
+	monthlyInterest = state.interest_rate / 100 / 12;
+	monthlyPrincipalInterest = (
+		totalLoan *
+		((monthlyInterest * (1 + monthlyInterest) ** totalMonths) /
+			((1 + monthlyInterest) ** totalMonths - 1))
+	).toFixed(2);
+	monthlyPopertyTaxes = (
+		(state.price * (state.property_tax / 100)) /
+		12
+	).toFixed(2);
+	monthlyHomeInsurance = state.home_insurance / 12;
+	monthlyHOA = state.hoa / 12;
+	monthlyTotal = (
+		parseFloat(monthlyPrincipalInterest) +
+		parseFloat(monthlyPopertyTaxes) +
+		parseFloat(monthlyHomeInsurance) +
+		parseFloat(monthlyHOA)
+	).toFixed(2); // ADDED PARENTHESIS AND TOFIXED(2) NEED TO CHECK IF THIS CAUSES ISSUE.
+	document.getElementsByClassName("info__numbers--principal")[0].innerHTML =
+		parseFloat(monthlyPrincipalInterest).toFixed(2);
+	document.getElementsByClassName(
+		"info__numbers--property_taxes"
+	)[0].innerHTML = parseFloat(monthlyPopertyTaxes).toFixed(2);
+	document.getElementsByClassName(
+		"info__numbers--home_insurance"
+	)[0].innerHTML = parseFloat(monthlyHomeInsurance).toFixed(2);
+	document.getElementsByClassName("info__numbers--hoa")[0].innerHTML =
+		parseFloat(monthlyHOA).toFixed(2);
+	document.getElementsByClassName("info__numbers--total")[0].innerHTML =
+		monthlyTotal;
+	updateChart(myChart, labels, backgroundColor);
+}
+
+function updateChart(chart, label, color) {
+	chart.data.datasets.pop();
+	chart.data.datasets.push({
+		label: label,
+		backgroundColor: color,
+		data: [
+			monthlyPrincipalInterest,
+			monthlyPopertyTaxes,
+			monthlyHomeInsurance,
+			monthlyHOA,
+		],
+	});
+	chart.options.transitions.active.animation.duration = 0;
+	chart.update();
+}
+
+calculateData();
