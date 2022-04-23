@@ -60,12 +60,13 @@
 }
 
 #top .img .background-img {
-    background: url('../img/userimg1.webp');
+    background-image: url('/img/userimg1.webp');
+    max-width: 500px;
+    width: 100%;
+    height: 800px;
     background-position: top center;
     background-repeat: no-repeat;
-    width: 100%;
-    max-width: 500px;
-    height: 800px;
+    background-size: cover;
     margin: 0 auto;
 }
 
@@ -74,6 +75,7 @@
 /*******************************************/
 
 @media only screen and (max-width: 960px) {
+
 
 }
 
@@ -89,7 +91,7 @@
     #top .info .blue-square {
         display: none;
     }
-    
+
     #top .img .background-img {
         height: 100vh;
     }
