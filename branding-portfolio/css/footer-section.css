@@ -39,3 +39,19 @@ footer h6 {
     text-transform: capitalize;
     text-align: center;
 }
+
+/******************************************
+/* MEDIA QUIERIES STYLES TABLET
+/*******************************************/
+
+@media only screen and (max-width: 960px) {
+
+}
+
+/******************************************
+/* MEDIA QUIERIES STYLES MOBILE
+/*******************************************/
+
+@media only screen and (max-width: 767px) {
+
+}

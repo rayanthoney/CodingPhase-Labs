@@ -37,8 +37,15 @@ body {
 	margin: 0 auto;
 }
 
-h2 {
-}
+
 /******************************************
-/* ADDITIONAL STYLES
+/* MEDIA QUIERIES STYLES
 /*******************************************/
+@media only screen and (max-width: 960px) {
+	.container {width: 100%;}
+}
+
+/* PHONES */
+@media only screen and (max-width: 767px) {
+	.container {}
+}

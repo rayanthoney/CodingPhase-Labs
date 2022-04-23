@@ -82,3 +82,19 @@
 #services-section .services-container .box.yellow {
     border-bottom: 2px solid var(--yellow);
 }
+
+/******************************************
+/* MEDIA QUIERIES STYLES TABLET
+/*******************************************/
+
+@media only screen and (max-width: 960px) {
+
+}
+
+/******************************************
+/* MEDIA QUIERIES STYLES MOBILE
+/*******************************************/
+
+@media only screen and (max-width: 767px) {
+
+}

@@ -60,7 +60,7 @@
 }
 
 #top .img .background-img {
-    background: url('../img/user-img.jpg');
+    background: url('../img/userimg1.webp');
     background-position: top center;
     background-repeat: no-repeat;
     width: 100%;
@@ -68,3 +68,33 @@
     height: 800px;
     margin: 0 auto;
 }
+
+/******************************************
+/* MEDIA QUIERIES STYLES TABLET
+/*******************************************/
+
+@media only screen and (max-width: 960px) {
+
+}
+
+/******************************************
+/* MEDIA QUIERIES STYLES MOBILE
+/*******************************************/
+
+@media only screen and (max-width: 767px) {
+    #top .container {
+        padding: 0 0 80px;
+    }
+
+    #top .info .blue-square {
+        display: none;
+    }
+    
+    #top .img .background-img {
+        height: 100vh;
+    }
+}
+
+/* @media only screen and (max-width: 960px) {
+
+} */
