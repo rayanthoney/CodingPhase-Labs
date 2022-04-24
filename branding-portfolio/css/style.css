@@ -52,8 +52,13 @@ header .logo {
 	font-weight: 700;
 	text-transform: uppercase;
 	color: white;
+}
+
+header .logo .name {
 	background: black;
 	padding: 15px 20px;
+	text-decoration: none;
+	color: white;
 }
 
 header .header-menu {
@@ -79,6 +84,18 @@ header .header-menu a:hover {
 	color: #ff5253;
 }
 
+header .menu-btn {
+	font-weight: 700;
+	color: #ff5253;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	font-size: 1.6rem;
+	display: none;
+	cursor: pointer;
+}
+
 
 /******************************************
 /* MEDIA QUIERIES STYLES
@@ -89,5 +106,15 @@ header .header-menu a:hover {
 
 /* PHONES */
 @media only screen and (max-width: 767px) {
-	.container {}
+	header .header-menu {
+		display: none;
+	}
+
+	header .menu-btn {
+		display: flex;
+	}
+
+	header .logo {
+		font-size: 1rem;
+	}
 }
