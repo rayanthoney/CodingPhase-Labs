@@ -31,20 +31,20 @@
     display: inline-block;
     padding: 10px 20px;
     border-radius: 3px;
-    color: white;
-    background: black;
+    color: var(--white);
+    background: var(--fontDark);
     text-decoration: none;
     text-transform: capitalize;
     transition: all .3s ease-in-out;
 }
 
 #portfolio-projects .info .buttons .fa-solid {
-    color: #ff5253;
+    color: var(--red);
     margin-right: 10px;
 }
 
 #portfolio-projects .info .buttons a:hover {
-    background: #ff5253;
+    background: var(--red);
 }
 
 #portfolio-projects .info .buttons a:hover .fa-solid {
@@ -54,7 +54,7 @@
 #portfolio-projects p {
     display: inline-block;
     border-radius: 3px;
-    color: #929294;
+    color: var(--fontGray);
     font-size: 1.2rem;
     line-height: 1.7;
     text-decoration: none;

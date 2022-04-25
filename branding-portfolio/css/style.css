@@ -18,17 +18,14 @@
 	--white: #fff;
 	--fontDark: #16171b;
 	--fontGray: #919191;
-	--babyBlue: #dbf1ff;
-	--dkBlue: #52b8ff;
-	--red: #ff5253;
-	--yellow: #ffc853;
 	--ltGray: #b3b3b3;
+	--bgGray: #f9fafc;
+	--dkBlue: #52b8ff;
+	--babyBlue: #dbf1ff;
+	--red: #ff5253;
 	--ltRed: #ffeded;
+	--yellow: #ffc853;
 }
-
-/*
-
-*/
 
 /******************************************
 /* LAYOUT

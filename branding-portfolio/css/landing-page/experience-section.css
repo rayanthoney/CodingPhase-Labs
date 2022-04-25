@@ -3,7 +3,7 @@
 }
 
 #experience-section .large-title {
-    color: #c6e4ff;
+    color: var(--babyBlue);
     font-weight: 900;
     font-size: 4.5rem;
     text-align: center;
@@ -19,7 +19,7 @@
 }
 
 #experience-section .experience-container .large-icons .square {
-    border: 30px solid #52b8ff;
+    border: 30px solid var(--dkBlue);
     padding: 5px;
     display: inline-block;
     position: relative;
@@ -29,7 +29,7 @@
 #experience-section .experience-container .large-icons .square .blue-box {
     width: 150px;
     height: 150px;
-    background-color: #52b8ff;
+    background-color: var(--dkBlue);
     padding: 5px;
     color: white;
     text-transform: uppercase;
@@ -42,7 +42,7 @@
 }
 
 #experience-section .experience-container .large-icons .circle {
-    border: 30px solid #ffc853;
+    border: 30px solid var(--yellow);
     padding: 5px;
     display: inline-block;
     border-radius: 50%;
@@ -52,7 +52,7 @@
 }
 
 #experience-section .experience-container .large-icons .circle .white-box {
-    color: #ffc853;
+    color: var(--yellow);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@
    height: 0;
    border-style: solid;
    border-width: 0 150px 230px 150px;
-   border-color:  transparent transparent #ff5253 transparent;
+   border-color:  transparent transparent var(--red) transparent;
    position: relative;
 }
 
@@ -80,7 +80,7 @@
    height: 0;
    border-style: solid;
    border-width: 0 93.75px 151.75px 93.75px;
-   border-color:  transparent transparent #ffffff transparent;
+   border-color:  transparent transparent var(--white) transparent;
    position: absolute;
    left: -94px;
    top: 49px;
@@ -150,7 +150,7 @@
     }
 
     #experience-section .experience-container .large-icons .square {
-        border: 30px solid #52b8ff;
+        border: 30px solid var(--dkBlue);
         padding: 5px;
         display: inline-block;
         position: relative;
