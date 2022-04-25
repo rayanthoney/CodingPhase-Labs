@@ -1,3 +1,22 @@
+/*
+RayAnthoney Portfolio
+
+==================================================
+CSS SITEMAP >>>>
+
+  01. HEADER-MENU-SECTION CSS
+  02. TOP-SECTION CSS
+  03. SERVICES-SECTION CSS
+  04. PORTFOLIO-SECTION CSS
+  05. EXPERIANCE-SECTION CSS
+  06. BLOG-SECTION CSS
+  07. TESTIMONIAL-SECTION CSS
+  08. PORTFOLIO-SECTION CSS
+  09. FOOTER-SECTION CSS
+  10. PORTFOLIO-PROJECT-SECTION CSS
+
+==================================================*/
+
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
 @import "landing-page/top-section.css";
@@ -61,6 +80,8 @@ header .logo .name {
 	padding: 15px 20px;
 	text-decoration: none;
 	color: var(--red);
+	border-radius: 10px;
+
 }
 
 header .header-menu {
