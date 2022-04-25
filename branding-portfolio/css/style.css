@@ -1,11 +1,12 @@
 @import "reset.css";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap');
-@import "top-section.css";
-@import "services-section.css";
-@import "portfolio-section.css";
-@import "experience-section.css";
-@import "blog-section.css";
-@import "testimonials-section.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
+@import "landing-page/top-section.css";
+@import "landing-page/services-section.css";
+@import "landing-page/portfolio-section.css";
+@import "landing-page/experience-section.css";
+@import "landing-page/blog-section.css";
+@import "landing-page/testimonials-section.css";
+@import "portfolio/portfolio-projects.css";
 @import "footer-section.css";
 
 /******************************************
@@ -50,12 +51,12 @@ header {
 header .logo {
 	font-size: 1rem;
 	font-weight: 700;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	color: white;
 }
 
 header .logo .name {
-	background: black;
+	background: #ff5253;
 	padding: 15px 20px;
 	text-decoration: none;
 	color: white;

@@ -60,7 +60,7 @@
 }
 
 #top .img .background-img {
-    background-image: url('/img/user-img.jpg');
+    background-image: url('../../img/user-img.jpg');
     max-width: 500px;
     width: 100%;
     height: 800px;
