@@ -11,8 +11,9 @@
 <br>
 
 <div align="center">
-    <video src="https://i.imgur.com/wIOFD8S.gifv" controls="controls" style="max-width: 730px;">
-    </video>
+    <a>
+        <img src="https://i.imgur.com/wIOFD8S.gif" alt="" width="70%" />
+    </a>
 </div>
 
 <br>
