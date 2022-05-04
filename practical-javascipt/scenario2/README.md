@@ -10,11 +10,25 @@
 <br>
 <br>
 
-<div align="center">
-<a href="">
-    <img src="https://www.youtube.com/embed/5jFlzKsPbEo" alt="Static Auto site" height="100%"/>
-</a>
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/5jFlzKsPbEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<div align="center" >
+    <a href='https://youtu.be/5jFlzKsPbEo'>
+        <img src="img/cp-Jeep03.png" alt="Static Automotive Site" height="100%"/>
+    </a>
+
+<br>
+<br>
+
+<p>
+    <a href="https://github.com/rayanthoney/CodingPhase-Labs/tree/master/practical-javascipt/scenario2" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=plastic&zfor-the-badge&logo=github"/>
+    </a>
+    <a href="https://youtu.be/5jFlzKsPbEo" target="_blank">
+        <img src="https://img.shields.io/badge/-website-green?style=plastic&zfor-the-badge&color=e8970c"/>
+    </a>
+</p>
+<p>
+<strong>JavaScript, CSS3, HTML5</strong> - JavaScript version of the popular long-running tv quiz gameshow. Questions are pulled from an API database.
+</p>
 </div>
 
 <br>
