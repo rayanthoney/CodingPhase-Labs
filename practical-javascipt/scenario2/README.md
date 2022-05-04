@@ -10,8 +10,11 @@
 <br>
 <br>
 
-<div class="embed-responsive embed-responsive-16by9" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5jFlzKsPbEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div align="center">
+<a href="">
+    <img src="https://www.youtube.com/embed/5jFlzKsPbEo" alt="Static Auto site" height="100%"/>
+</a>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/5jFlzKsPbEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 </div>
 
 <br>
