@@ -11,7 +11,7 @@
 <br>
 
 <div align="center">
-    <video src="/img/Jeep.mp4" controls="controls" style="max-width: 730px;">
+    <video src="/img/Jeep.gif" controls="controls" style="max-width: 730px;">
     </video>
 </div>
 
