@@ -5,7 +5,7 @@
 <br>
 
 <!-- Banner Section -->
-<h2 align="center">Projects</h2>
+<h2 align="center">🛠️ Projects</h2>
 
 <br>
 <br>
@@ -26,28 +26,18 @@
         <img src="https://img.shields.io/badge/-website-green?style=plastic&zfor-the-badge&color=e8970c"/>
     </a>
 </p>
-<p>
-<strong>JavaScript, CSS3, HTML5</strong> - JavaScript version of the popular long-running tv quiz gameshow. Questions are pulled from an API database.
-</p>
 </div>
 
 <br>
-<br>
-<br>
 
-# 🎨 Built With
-
-## 🛠️ This project was built using these technologies.
+## 🎨 This project was built using these technologies.
 
 <br>
 
-**_HTML_**
+<p>
+<strong>JavaScript, CSS3, HTML5</strong> - JavaScript version of a Jeep Automotive Static webpage displaying new models of my favorite types of vehicles.
+</p>
 
-**_CSS_**
-
-**_JavaScript_**
-
-<br>
 <br>
 
 [![HTML5 Badge](https://img.shields.io/badge/-HTML-E44D26?style=plastic&for-the-badge&labelColor=black&logo=html5&logoColor=E44D26)](#)&nbsp;
