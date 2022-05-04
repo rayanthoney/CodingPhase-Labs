@@ -11,9 +11,7 @@
 <br>
 
 <div class="embed-responsive embed-responsive-16by9" align="center">
-
-<iframe width="560" height="315" src="https://youtu.be/5jFlzKsPbEo" frameborder="1" alow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5jFlzKsPbEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br>
