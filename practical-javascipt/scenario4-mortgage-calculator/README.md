@@ -5,23 +5,39 @@
 <br>
 
 <!-- Banner Section -->
-[![Mortgify Real Estate Calculator](/img/cp-mortgagecalculator.png)]()
+<h2 align="center">🛠️ Projects</h2>
 
 <br>
 <br>
+
+<div align="center" >
+    <a href=''>
+        <img src="img/cp-mortgagecalculator.png" alt="Mortgage Calculator" width="100%"/>
+    </a>
+
+<br>
 <br>
 
-# 🎨 Built With
-
-## 🛠️ This project was built using these technologies.
+<p>
+    <a href="https://github.com/rayanthoney/CodingPhase-Labs/tree/master/practical-javascipt/scenario4-mortgage-calculator" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=plastic&zfor-the-badge&logo=github"/>
+    </a>
+    <a href="" target="_blank">
+        <img src="https://img.shields.io/badge/-website-green?style=plastic&zfor-the-badge&color=e8970c"/>
+    </a>
+</p>
+</div>
 
 <br>
 
-**_HTML_**
+## 🎨 This project was built using these technologies.
 
-**_CSS_**
+<br>
 
-**_JavaSript_**
+<p>
+<strong>JavaScript, CSS3, HTML5</strong> - JavaScript version of a Mortgage Calculator created within the Codingphase Practical JavaScript course.
+</p>
+
 <br>
 
 [![HTML5 Badge](https://img.shields.io/badge/-HTML-E44D26?style=plastic&for-the-badge&labelColor=black&logo=html5&logoColor=E44D26)](#)&nbsp;
