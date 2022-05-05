@@ -1,14 +1,46 @@
-## Hello 100Devs it's ""
-"https://cdn.dribbble.com/users/9684942/screenshots/18035226/media/5a2535637cb8e7d8f06e566d7d61fa0d.jpg"
+# Codingphase Practical JavaScript project "Branding Portfolio"
 
-"https://cdn.dribbble.com/userupload/2592649/file/original-653a6fc7c56ab3ac6f828c41c01f36f3.jpg?filters:format(webp)"
+<br>
+<br>
+<br>
 
-"https://cdn.dribbble.com/users/5078595/screenshots/18033345/media/b0fd2758037a9abefc988b580e57b234.png"
+<!-- Banner Section -->
+<h2 align="center">🛠️ Projects</h2>
 
-"https://cdn.dribbble.com/users/1814646/screenshots/18033928/media/e06ee35c1860bb2beeabf09151eeac43.png"
+<br>
+<br>
 
-"https://cdn.dribbble.com/users/572344/screenshots/18035722/media/135c29d15fded57513718c5524c2bf7d.png"
+<div align="center" >
+    <a href=''>
+        <img src="img/cp-branding.png" alt="Branding Portfolio" width="100%"/>
+    </a>
 
-"https://cdn.dribbble.com/userupload/2591455/file/original-cf924144f2ec6dfea94283670595d37d.jpg?filters:format(webp)"
+<br>
+<br>
 
-"https://cdn.dribbble.com/users/10549369/screenshots/17995703/media/67c61158ae7c970fcfb81970d7822598.jpg"
+<p>
+    <a href="https://github.com/rayanthoney/CodingPhase-Labs/tree/master/practical-javascipt/scenario4-mortgage-calculator" target="_blank">
+            <img src="https://img.shields.io/badge/Repo-lightgrey?style=plastic&zfor-the-badge&logo=github"/>
+    </a>
+    <a href="" target="_blank">
+        <img src="https://img.shields.io/badge/-website-green?style=plastic&zfor-the-badge&color=e8970c"/>
+    </a>
+</p>
+</div>
+
+<br>
+
+## 🎨 This project was built using these technologies.
+
+<br>
+
+<p>
+<strong>JavaScript, CSS3, HTML5</strong> - JavaScript version of a Branding Portfolio created within the Codingphase "Web Developer Personal Brand" course.
+</p>
+
+<br>
+
+[![HTML5 Badge](https://img.shields.io/badge/-HTML-E44D26?style=plastic&for-the-badge&labelColor=black&logo=html5&logoColor=E44D26)](#)&nbsp;
+[![CSS3 Badge](https://img.shields.io/badge/-CSS-1572B6?&style=plastic&for-the-badge&labelColor=black&logo=css3&logoColor=1572B6)](#)&nbsp;&nbsp;
+[![Javascript Badge](https://img.shields.io/badge/-Javascript-F0DB4F?style=plastic&for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)](#)&nbsp;&nbsp;
+
