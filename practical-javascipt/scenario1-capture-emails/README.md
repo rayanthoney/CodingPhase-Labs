@@ -1,4 +1,4 @@
-# Codingphase Practical JavaScript project "Social Media Card"
+# Codingphase Practical JavaScript project "Email Capture Modal"
 
 <br>
 <br>
@@ -11,18 +11,18 @@
 <br>
 
 <div align="center" >
-    <a href='https://youtu.be/NgngnNwxJXM'>
-        <img src="img/memo-brown.png" alt="Social Media Card" width="300"/>
+    <a href='https://youtu.be/Z_p1m6ixXAI'>
+        <img src="img/cp-captureemail.png" alt="Social Media Card" width="300"/>
     </a>
 
 <br>
 <br>
 
 <p>
-    <a href="https://github.com/rayanthoney/CodingPhase-Labs/tree/master/practical-javascipt/scenario3-socialmedia" target="_blank">
+    <a href="https://github.com/rayanthoney/CodingPhase-Labs/tree/master/practical-javascipt/scenario1" target="_blank">
             <img src="https://img.shields.io/badge/Repo-lightgrey?style=plastic&zfor-the-badge&logo=github"/>
     </a>
-    <a href="https://youtu.be/NgngnNwxJXM" target="_blank">
+    <a href="https://youtu.be/Z_p1m6ixXAI" target="_blank">
         <img src="https://img.shields.io/badge/-website-green?style=plastic&zfor-the-badge&color=e8970c"/>
     </a>
 </p>
@@ -35,7 +35,7 @@
 <br>
 
 <p>
-<strong>JavaScript, CSS3, HTML5</strong> - JavaScript version of a Social Media Card displaying the ability to dynamically access your social media websites form one card.
+<strong>JavaScript, CSS3, HTML5</strong> - JavaScript version of a Email Capture Modal displaying the ability to dynamically capture customer emails when mouse moves from screen focus.
 </p>
 
 <br>
