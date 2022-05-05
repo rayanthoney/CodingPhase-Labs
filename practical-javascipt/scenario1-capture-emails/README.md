@@ -12,7 +12,7 @@
 
 <div align="center" >
     <a href='https://youtu.be/Z_p1m6ixXAI'>
-        <img src="img/cp-captureemail.png" alt="Social Media Card" width="300"/>
+        <img src="img/cp-captureemail.png" alt="Social Media Card" width="100%"/>
     </a>
 
 <br>
