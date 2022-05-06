@@ -35,7 +35,7 @@
 <br>
 
 <p>
-<strong>JavaScript, CSS3, HTML5</strong> - JavaScript version of a Pokemon Game Lab created within the Codingphase "Future-Proof Javascript" course.
+<strong>JavaScript, CSS3, HTML5</strong> - JavaScript version of a Pokemon Game Lab created within the Codingphase "Future Proof JavaScript" course.
 </p>
 
 <br>
