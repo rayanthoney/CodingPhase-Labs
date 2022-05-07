@@ -12,7 +12,7 @@
 
 <div align="center" >
     <a href=''>
-        <img src="img/resturaunt-landing.gif" alt="Restaurant Landing Page" width="100%"/>
+        <img src="img/resturaunt-landing.gif" alt="Restaurant Landing Page" width="50%"/>
     </a>
 
 <br>
