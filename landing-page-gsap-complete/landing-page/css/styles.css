@@ -55,9 +55,9 @@ header .menu li a{
   margin: 0 auto;
 }
 #home{
-  
+
   /* overflow: hidden; */
-  
+
 }
 #home .content-area{
   height: calc(100vh);
@@ -134,7 +134,7 @@ header .menu li a{
   transform: translate3d(300px, 100px, 0);
   transition: filter .4s ease-in-out;
   cursor: pointer;
-  
+
 }
 #home .photos .boy:hover, #home .photos .girl:hover{
   filter: blur(35px);
@@ -169,3 +169,4 @@ header .menu li a{
   border: 1px dashed white;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+
