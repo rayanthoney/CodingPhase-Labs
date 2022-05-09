@@ -1,8 +1,21 @@
-node_modules/
 .vscode/
+node_modules/
 Starter-Kit-2018/
-/practical-javascipt/scenario1_css
-/practical-javascipt/scenario2_css
-/practical-javascipt/scenario2-full
+practical-javascipt/basics/
+object-oriented/
+nodejs/node_modules/
+ram-dev-kit/node_modules/
+pokemon-game-lab/node_modules/
+landing-page-gsap/
+landing-page-gsap-complete/
+landing-page-gsap-final/
+landing-page-html/
+js-animations/
+
+
+
+
+
+
 
 
