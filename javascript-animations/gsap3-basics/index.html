@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP3 Basics</title>
+
+    <style>
+        h1 {
+            color: aquamarine;
+        }
+        #container {
+            background-color: black;
+            width: 500px;
+            height: 500px;
+        }
+        #box {
+            margin-top: 100px;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        .button1, .button2, .button3, .button4 {
+            background-color: gray;
+            padding: 20px;
+            width: 60px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .button1:hover, .button2:hover, .button3:hover, .button4:hover {
+          background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Codingphase World!</h1>
+    <section id="container">
+        <div id="box"></div>
+    </section>
+    <div class="button1">Run</div>
+    <div class="button2">Play</div>
+    <div class="button3">Pause</div>
+    <div class="button4">Reverse</div>
+
+<script type="text/javascript" src="node_modules/gsap/dist/gsap.min.js"></script>
+<script>
+    // START POINT TO END POINT USING TWEEN
+    // gsap.to('h1', {duration: 1, x: 500, y: 500});
+    // gsap.from('h1', {duration: 1, x: 500, y: 500});
+
+   let button1 = document.querySelector('.button1');
+   let button2 = document.querySelector('.button2');
+   let button3 = document.querySelector('.button3');
+   let button4 = document.querySelector('.button4');
+   let tween1;
+//    let tween2
+   button1.addEventListener('click', () => {
+    let tween1 = gsap.fromTo('h1', {x: 500, y: 500},
+    {x: 0, y: 100, duration: 3});
+    // let tween2 = gsap.fromTo('#box', {x: 500, y: 500},
+    // {x: 0, y: 0, duration: 3});
+   })
+   button2.addEventListener('click', () => {
+       tween1.play()
+    //    tween2.play()
+   })
+   button3.addEventListener('click', () => {
+       tween1.pause()
+    //    tween2.pause()
+   })
+   button4.addEventListener('click', () => {
+       tween1.reverse()
+    //    tween2.reverse()
+   })
+</script>
+</body>
+</html>

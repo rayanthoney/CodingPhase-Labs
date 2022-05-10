@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+	--bg-ltgreen:	#252d20;
+	--bg-darkGreen: #1b201c;
+	--lime: #c5fb4c;
+	--white: #fff;
+/* Jh3yy Root */
+    --on: 0;
+    --nav-open: 0;
+    --sz-0: 0.25rem;
+    --sz-1: 0.5rem;
+    --sz-2: 0.75rem;
+    --sz-3: 0.875rem;
+    --sz-4: 1rem;
+    --sz-5: 1.25rem;
+    --sz-6: 1.5rem;
+    --sz-7: 2rem;
+    --sz-8: 3rem;
+    --sz-9: 4rem;
+    --sz-10: 6rem;
+    --sz-11: 8rem;
+    --sz-13: 16rem;
+    --sz-17: 48rem;
+    --tn-zp: 0.1s;
+    --tn-qu: 0.2s;
+    --max-width: var(--sz-17);
+    --heading-size: 2;
+    --heading-line-height: 0.9;
+    --min-control-size: 48px;
+    --nav-height: 80px;
+    --nav-width: var(--sz-13);
+    --bg: hsl(calc(200 - var(--on)*160),calc((20 + var(--on)*50)*1%),calc((10 + var(--on)*80)*1%));
+    --bg-2: hsl(calc(200 - var(--on)*160),calc((20 + var(--on)*50)*1%),calc(var(--on)*100*1%));
+    --bg-3: hsl(calc(200 - var(--on)*160),calc((20 + var(--on)*50)*1%),calc((3 + var(--on)*94)*1%));
+    --bg-4: linear-gradient(90deg, rgba(27,32,28,1) 0%, rgba(117,148,98,1) 100%);
+    --color: hsl(0,0%,calc((96 - var(--on)*80)*1%));
+    --color-2: hsl(0,0%,calc((70 - var(--on)*35)*1%));
+    --border: hsla(0,0%,calc((100 - var(--on)*90)*1%),0.5);
+    --accent: #dd3c3c;
+    --accent-2: rgba(221,60,60,0.5);
+
+}
+
+*{
+  font-family: 'Manrope', sans-serif;
+  box-sizing: border-box;
+}
+html{
+  font-family: 'Manrope', sans-serif;
+  background: var(--white);
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+body{
+  background: var(--bg-4);
+}
+header{
+  color: var(--lime);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 90px;
+  padding: 0 40px;
+}
+header .logo{
+  font-weight: 700;
+}
+header .logo a {
+  color: var(--lime);
+  text-decoration: none;
+}
+header .menu ul{
+  display: flex;
+}
+header .menu ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .menu li a{
+  font-size: .8rem;
+  color: var(--lime);
+  text-decoration: none;
+  padding-right: 20px;
+}
+.menu-btn{
+  background: rgba(255, 255, 255, .3);
+  padding: 15px 15px;
+  border-radius: 20px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 40px; */
+}
+.container{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+#home{
+
+  /* overflow: hidden; */
+
+}
+#home .content-area{
+  height: calc(100vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .info-section{
+  width: 50%;
+}
+#home .info-section h1{
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--lime);
+  margin-bottom: 2rem;
+}
+#home .info-section h4{
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--lime);
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+#home .info-section .call-actions{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.action-btn, .action-ghost-btn{
+  padding: 20px 20px;
+  border-radius: 30px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  font-size: .9rem;
+}
+.action-btn{
+  background: var(--lime);
+  color: var(--bg-ltgreen);
+  margin-right: 20px;
+}
+.action-ghost-btn{
+  background: transparent;
+  border: 2px solid var(--lime);
+  color: var(--lime);
+}
+#home .photos{
+  width: 50%;
+  position: relative;
+  height: 400px;
+}
+#home .photos .girl{
+  position: absolute;
+  width: 400px;
+  height: 0;
+  z-index: 1;
+  transform: translate3d(0, -200px, 0);
+  object-fit: cover;
+  object-position: top;
+  transition: filter .4s ease-in-out;
+  cursor: pointer;
+}
+#home .photos .boy{
+  position: absolute;
+  width: 400px;
+  height: 0;
+  z-index: 2;
+  object-fit: cover;
+  object-position: top;
+  transform: translate3d(300px, 100px, 0);
+  transition: filter .4s ease-in-out;
+  cursor: pointer;
+
+}
+#home .photos .boy:hover, #home .photos .girl:hover{
+  filter: blur(35px);
+}
+
+.shape1{
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border: 2px dashed var(--lime);
+  transform: translate3d(100px,0, 0);
+}
+.shape2{
+  opacity: .3;
+  border: 2px dashed var(--white);
+  background-color: var(--lime);
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: translate3d(600px,-300px, 0);
+  border: 1px dashed var(--white);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.shape3{
+  opacity: .6;
+  border: 2px dashed var(--white);
+  background-color: var(--lime);
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: translate3d(0px,300px, 0);
+  border: 1px dashed var(--white);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
