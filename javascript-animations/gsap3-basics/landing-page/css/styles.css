@@ -56,6 +56,15 @@ html{
 body{
   background: var(--bg-4);
 }
+.loading-bg {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transform: translate(0, 100%);
+}
 header{
   color: var(--lime);
   display: flex;
