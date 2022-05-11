@@ -193,6 +193,39 @@ const loadingEnter = () => {
 		}
 	);
 };
+
+const galleryEnter = () => {
+	let timeline = gsap.timeline();
+	timeline
+	.fromTo(
+		'.white-bg',
+	{
+		y: 50,
+		opacity: 0
+	},
+	{
+		y: 0,
+		opacity: 1,
+		duration: .8,
+		ease: 'power1.inOut'
+	}
+	)
+	.fromTo(
+		'.white-bg ul li',
+		{
+			y: 50,
+			opacity: 0
+		},
+		{
+			y: 0,
+			opacity: 1,
+			duration: .4,
+			stagger: .2,
+			ease: 'power1.inOut'
+		}
+	)
+}
+galleryEnter()
 barba.init({
 	sync: true,
 	transitions: [
@@ -215,4 +248,14 @@ barba.init({
 			},
 		},
 	],
+	// views: [{
+	// 	namespace: 'index',
+	// 	beforeLeave(data) {
+	// 	  // do something before leaving the current `index` namespace
+	// 	}
+	//   }, {
+	// 	namespace: 'contact',
+	// 	beforeEnter(data) {
+	// 	  // do something before entering the `contact` namespace
+	// 	}
 });
