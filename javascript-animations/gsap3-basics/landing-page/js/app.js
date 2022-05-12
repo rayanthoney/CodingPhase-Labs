@@ -197,35 +197,35 @@ const loadingEnter = () => {
 const galleryEnter = () => {
 	let timeline = gsap.timeline();
 	timeline
-	.fromTo(
-		'.white-bg',
-	{
-		y: 50,
-		opacity: 0
-	},
-	{
-		y: 0,
-		opacity: 1,
-		duration: .8,
-		ease: 'power1.inOut'
-	}
-	)
-	.fromTo(
-		'.white-bg ul li',
-		{
-			y: 50,
-			opacity: 0
-		},
-		{
-			y: 0,
-			opacity: 1,
-			duration: .4,
-			stagger: .2,
-			ease: 'power1.inOut'
-		}
-	)
-}
-galleryEnter()
+		.fromTo(
+			".white-bg",
+			{
+				y: 50,
+				opacity: 0,
+			},
+			{
+				y: 0,
+				opacity: 1,
+				duration: 0.8,
+				ease: "power1.inOut",
+			}
+		)
+		.fromTo(
+			".white-bg ul li",
+			{
+				y: 50,
+				opacity: 0,
+			},
+			{
+				y: 0,
+				opacity: 1,
+				duration: 0.4,
+				stagger: 0.2,
+				ease: "power1.inOut",
+			}
+		);
+};
+galleryEnter();
 barba.init({
 	sync: true,
 	transitions: [
@@ -247,15 +247,54 @@ barba.init({
 				initialPageAnimation();
 			},
 		},
+		{
+			name: "gallery-transition",
+			from: {
+				namespace: ["home", "about"],
+			},
+			to: {
+				namespace: ["gallery"],
+			},
+			async leave(data) {
+				const done = this.async();
+				console.log("Leaving Page Animation");
+				loadingLeave();
+				await delay(1500);
+				done();
+			},
+			async enter(data) {
+				loadingEnter();
+				galleryEnter();
+				console.log("Entering Page Animation");
+			},
+			async once(data) {
+				initialPageAnimation();
+			},
+		},
 	],
-	// views: [{
-	// 	namespace: 'index',
-	// 	beforeLeave(data) {
-	// 	  // do something before leaving the current `index` namespace
-	// 	}
-	//   }, {
-	// 	namespace: 'contact',
-	// 	beforeEnter(data) {
-	// 	  // do something before entering the `contact` namespace
-	// 	}
+	views: [
+		// {
+		// 	namespace: "index",
+		// 	beforeLeave(data) {
+		// 		// do something before leaving the current `index` namespace
+		// 	},
+		// },
+		{
+			namespace: "about",
+			afterEnter(data) {
+				// do something before entering the `gallery` namespace
+				loadingEnter();
+			},
+		},
+		{
+			namespace: "gallery",
+			afterEnter(data) {
+				// do something before entering the `gallery` namespace
+				loadingEnter();
+				galleryEnter();
+			},
+		},
+	],
 });
+// USE YOUR BRAIN: HOMEWORK DEBUG ABOUT PAGE. CREATE IT'S OWN ANIMATION (aboutEnter). SAME FOR THE GALLERY PAGE (READ THE VIEWS DOCS)
+// 1. SEPERATE THE ANIMATION FOR THE HEADER AND TRIGGER ON EVERY PAGE.
