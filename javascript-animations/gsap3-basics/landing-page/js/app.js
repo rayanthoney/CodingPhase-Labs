@@ -323,6 +323,7 @@ let homeController = new ScrollMagic.Controller();
 let serviceScene = new ScrollMagic.Scene({
 	triggerElement: '#main-services',
 	triggerHook: 1,
+	// reverse: false,
 	duration: serviceElement.offsetHeight
 })
 .setTween(tlServicesScroll)

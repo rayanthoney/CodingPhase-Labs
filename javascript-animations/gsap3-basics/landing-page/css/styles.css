@@ -230,7 +230,7 @@ header .menu li a{
 #main-services {
 }
 #main-services .black-bg {
-  background-color: var(--lime);
+  background-color: var(--bg-darkGreen);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -239,14 +239,14 @@ header .menu li a{
 }
 #main-services h2 {
   font-size: 3rem;
-  color: white;
+  color: var(--lime);
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 150px;
   text-align: center;
 }
 #main-services .services {
   display: grid;
-  color: white;
+  color: var(--lime);
   min-width: 1200px;
   width: 100%;
   grid-template-columns: repeat(3, 1fr) ;
@@ -255,22 +255,21 @@ header .menu li a{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+#main-services .services h3 {
+  font-size: 1.6rem;
 }
 #main-services .services .service .icon-circle {
-  background-color: red;
+  background-color: rgba(176, 178, 36, .4);
   height: 100px;
   width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  margin-bottom: 2rem;
 }
-#test  {
-  background-color: #1b1b1b;
-  height: 100vh;
-}
-
-
 /* *************************** */
 /*  GALLERY SECTION            */
 /* *************************** */
