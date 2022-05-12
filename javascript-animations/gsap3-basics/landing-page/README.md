@@ -46,4 +46,4 @@
 [![CSS3 Badge](https://img.shields.io/badge/-CSS-1572B6?&style=plastic&for-the-badge&labelColor=black&logo=css3&logoColor=1572B6)](#)&nbsp;
 [![Javascript Badge](https://img.shields.io/badge/-Javascript-F0DB4F?style=plastic&for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)](#)&nbsp;
 [![GreenSock Badge](https://img.shields.io/badge/-GreenSock-88cf02?style=plastic&for-the-badge&labelColor=black&logo=greensock&logoColor=88cf02)](#)&nbsp;
-[![Barba.JS Badge](https://img.shields.io/badge/-Barba.JS-2e5bdc?style=plastic&for-the-badge&labelColor=black&logo=barba.js&logoColor=88cf02)](#)&nbsp;
+[![Barba.JS Badge](https://img.shields.io/badge/-Barba.JScd-2e5bdc?style=plastic&for-the-badge&labelColor=black&logo=barba.js&logoColor=88cf02)](#)&nbsp;

@@ -230,7 +230,7 @@ header .menu li a{
 #main-services {
 }
 #main-services .black-bg {
-  background-color: black;
+  background-color: var(--lime);
   height: 100vh;
   display: flex;
   justify-content: center;

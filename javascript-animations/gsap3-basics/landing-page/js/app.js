@@ -1,3 +1,4 @@
+// PAGE TRANSITION ANIMATIONS
 const initialPageAnimation = () => {
 	let tl = gsap.timeline();
 	tl.fromTo(
@@ -160,7 +161,6 @@ const initialPageAnimation = () => {
 };
 
 // BARBAS.JS SECTION
-
 const delay = (n) => {
 	return new Promise((done) => {
 		setTimeout(() => {
@@ -225,7 +225,7 @@ const galleryEnter = () => {
 			}
 		);
 };
-galleryEnter();
+
 barba.init({
 	sync: true,
 	transitions: [
@@ -296,5 +296,36 @@ barba.init({
 		},
 	],
 });
-// USE YOUR BRAIN: HOMEWORK DEBUG ABOUT PAGE. CREATE IT'S OWN ANIMATION (aboutEnter). SAME FOR THE GALLERY PAGE (READ THE VIEWS DOCS)
+// USE YOUR BRAIN: HOMEWORK DEBUG ABOUT PAGE. CREATE IT'S OWN ANIMATION (aboutEnter).
+// SAME FOR THE GALLERY PAGE (READ THE VIEWS DOCS)
 // 1. SEPERATE THE ANIMATION FOR THE HEADER AND TRIGGER ON EVERY PAGE.
+
+// SCROLLMAGIC ANIMATIONS
+const tlServicesScroll = new gsap.timeline({
+	onUpdate: debugPercentage,
+});
+function debugPercentage() {
+	console.log(tlServicesScroll.progress());
+}
+tlServicesScroll.fromTo(
+	"#main-services",
+	{
+		x: "100%",
+	},
+	{
+		x: 0,
+	}
+);
+const serviceElement = document.querySelector('#main-services');
+
+let homeController = new ScrollMagic.Controller();
+
+let serviceScene = new ScrollMagic.Scene({
+	triggerElement: '#main-services',
+	triggerHook: 1,
+	duration: serviceElement.offsetHeight
+})
+.setTween(tlServicesScroll)
+.addIndicators()
+.addTo(homeController)
+
