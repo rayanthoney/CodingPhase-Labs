@@ -1,6 +1,6 @@
 <!-- Banner Section -->
 
-# 🛠️ My Awesome Project
+# 🛠️ My Awesome Projects
 
 **Link to project:** http://recruiters-love-seeing-live-demos.com/
 
