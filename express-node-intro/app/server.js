@@ -10,7 +10,7 @@ const PORT = 8500
 
 // GET METHOD
 app.get('/', (req, res) => {
-    res.send('<h2>Welcome to RayAnthoney and Node.JS Introduction from Codingphase Labs!</h2>')
+    res.send('<h2>Welcome to ExpressJS and Node.JS Introduction from Codingphase Labs!</h2>')
   })
   
  // START SERVER
