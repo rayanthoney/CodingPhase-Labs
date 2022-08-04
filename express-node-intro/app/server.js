@@ -6,6 +6,8 @@
 // DECLARE VARIABLES
 const express = require('express')
 const app = express()
+const DB = require("../database/connection")
+
 const PORT = 8500
 
 const routes = require("./routes.js")
