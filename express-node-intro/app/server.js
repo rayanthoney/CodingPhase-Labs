@@ -7,10 +7,12 @@
 const express = require('express')
 const app = express()
 const DB = require("../database/connection")
-
+const bodyParser = require('body-parser')
 const PORT = 8500
-
 const routes = require("./routes.js")
+
+// USING BODY PARSER FOR POST REQUEST DATA
+app.use(bodyParser.urlencoded({extended: true}))
 
 // ROUTES
 app.use("/", routes);
