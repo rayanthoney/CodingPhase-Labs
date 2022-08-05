@@ -7,10 +7,6 @@ router.get("/", (req, res) => {
   return res.render("../assets/views/homepage.pug");
 });
 
-router.get("/generic", (req, res) => {
-  return res.render("../assets/views/generic.pug");
-});
-
 router.get("/post/create", (req, res) => {
   return res.render("../assets/views/post/create.pug");
 });
@@ -26,15 +22,31 @@ router.post("/post/create", (req, res) => {
     } else {
       return res.redirect("/")
     }
-  })
-  // return res.json(post)
-  // return res.render("../assets/views/post/create.pug");
+  }) 
 });
+
+router.get("/post/:id", (req, res) => {
+
+  DB.query(
+    `SELECT * FROM posts WHERE id = ${req.params.id} LIMIT 1 `, 
+    (error, result) => {
+    if(error){
+      console.log('error')
+      console.log(error)
+      return res.redirect("/")
+    } else {
+      console.log("results:")
+      console.log(result[0])
+      return res.render("../assets/views/post/show.pug", result[0]);
+    }
+  }) 
+});
+
 
 router.get("/pug", (req, res) => {
   return res.render("../assets/views/testing.pug", {
     username: "codingphase",
-    fname: "RayAnthoney",
+    fname: "OneNetwork",
     lname: "Marvilous",
     loggedIn: "false",
     friends: ['Jane', "Johnny", "Billy", "Cindy"]

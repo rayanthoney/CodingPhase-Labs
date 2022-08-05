@@ -1,4 +1,4 @@
-extends layouts/app
+extends ../layouts/app
 
 block seo
   title generic
@@ -7,7 +7,7 @@ block content
   // Content
   section
     header.main
-      h1 Generic
+      h1= title
     span.image.main
       img(src='images/pic11.jpg', alt='')
     p
