@@ -23,5 +23,5 @@ app.set('view engine', 'pug')
 
  // START SERVER LISTENING ON PORT 8000
 app.listen(PORT, () =>
-console.log(`Server is running on port! ${PORT} You Betta go and catch it!`)
+console.log(`Server is running on port! ${PORT} You Betta go and catch it fast!`)
 );
