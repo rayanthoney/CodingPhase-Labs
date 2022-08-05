@@ -1,0 +1,19 @@
+extends ../layouts/app
+
+block seo
+  title Create A Post
+
+block content
+  // Banner
+  section#banner
+    .content
+     form(action="/post/create" method="POST")
+      label Title
+      input(type="text" name="demo-name" id="demo-name" value="" placeholder="Enter post title")
+      label Image URL
+      input(type="text" name="image_url" id="demo-name" value="" placeholder="Enter Featured Image")
+      label Description 
+      textarea(name="description" id="demo-message" placeholder="Enter your message" rows="6")
+      <input type="submit" value="Send Message" class="primary">
+
+     

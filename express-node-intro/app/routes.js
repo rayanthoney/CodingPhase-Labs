@@ -42,6 +42,23 @@ router.get("/post/:id", (req, res) => {
   }) 
 });
 
+router.get("/post/:id/edit", (req, res) => {
+
+  DB.query(
+    `SELECT * FROM posts WHERE id = ${req.params.id} LIMIT 1`, 
+    (error, result) => {
+    if(error){
+      console.log('error')
+      console.log(error)
+      return res.redirect("/")
+    } else {
+      console.log("results:")
+      console.log(result[0])
+      return res.render("../assets/views/post/edit.pug", result[0]);
+    }
+  }) 
+});
+
 
 router.get("/pug", (req, res) => {
   return res.render("../assets/views/testing.pug", {
