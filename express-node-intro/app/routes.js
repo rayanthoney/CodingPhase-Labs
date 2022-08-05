@@ -28,7 +28,7 @@ router.post("/post/create", (req, res) => {
 router.get("/post/:id", (req, res) => {
 
   DB.query(
-    `SELECT * FROM posts WHERE id = ${req.params.id} LIMIT 1 `, 
+    `SELECT * FROM posts WHERE id = ${req.params.id} LIMIT 1`, 
     (error, result) => {
     if(error){
       console.log('error')
