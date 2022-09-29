@@ -1,0 +1,14 @@
+extends layouts/app
+
+block seo
+    title Pug Testing
+
+
+block content
+    h1 Testing Pug Template Engine
+    if loggedIn
+        .card
+            h2= username
+            h3 #{fname} #{lname}
+            each friend in friends
+                li= friend

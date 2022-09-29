@@ -1,9 +1,21 @@
 const express = require('express')
 const app = express()
-const port = 8001
+const PORT = 8001
+
+// Import the routes file
+const routes = require("./routes.js")
+
+// Setting the routes
+app.use("/", routes)
+
+// Static Files Folders
+app.use(express.static ("public"))
+
+// Template Engine
+app.set("view.engine", "pug")
 
 
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}! 😁 `)
+// Listening on PORT 
+app.listen(PORT, () => {
+  console.log(`Your Server is runnig on port ${PORT}! 😁 you betta go catcth it! 🏃🏾‍♂️ `)
 })
