@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const DB = require('../database/connection')
 const PORT = 8001
 
 // Import the routes file
